@@ -6,4 +6,5 @@ Feature: add repository
 		When selfmodifier runs
 		Then a github repository, elginer/exclamation is added
 		When selfmodifier is stopped
+		When the database is loaded
 		Then a repository for elginer/exclamation is in the database

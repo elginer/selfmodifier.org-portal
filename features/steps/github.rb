@@ -1,4 +1,4 @@
-require "selfmodifier/models/user"
+require "selfmodifier/models/repository"
 
 Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 	with_selenium do |sel|
@@ -11,7 +11,7 @@ Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 end
 
 Then /^a repository for (.+)\/(.+) is in the database$/ do |username, repository|
-	unless Repository.find_by_user_and_repository(username, repository)
+	unless Repository.find_by_user_and_project(username, repository)
 		raise "Repository not in database: #{username}/#{repository}"
 	end
 end
