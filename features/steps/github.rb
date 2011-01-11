@@ -6,6 +6,7 @@ Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 		sel.type "username-field", username
 		sel.type "repository-field", repository
 		sel.click "Add"
+		sel.wait_for_page 10
 	end
 end
 

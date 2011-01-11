@@ -15,8 +15,9 @@ module SelfModifier
 	# Load a bunch of files from a directory
 	def SelfModifier.require_all dir
 		absolute_dir = SelfModifier::DIR + "/" + dir
-		Dir.entries(absolute_dir).each do |f|
-			dir + "/" + f
+		plugins = Dir.entries(absolute_dir).reject {|plug| not /^.+\.rb$/.match plug}
+		plugins.each do |f|
+			require dir + "/" + f
 		end
 	end
 
@@ -31,5 +32,3 @@ module SelfModifier
 	end
 
 end
-
-

@@ -11,6 +11,7 @@ include SelfModifier
 
 def fork_process file 
 	fork do
+		Process.setsid
 		path = File.expand_path ROOT + "/" + file
 		exec path 
 	end

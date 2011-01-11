@@ -1,0 +1,11 @@
+!!! XML
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title
+      selfmodifier.org - Add repository
+  %body
+    %form{:action => "add", :method => "POST"}
+      %input{:type => "text", :id => "username-field"}
+      %input{:type => "text", :id => "repository-field"}
+      %input{:type => "submit", :name => "Add"}
