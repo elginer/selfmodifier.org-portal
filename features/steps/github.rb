@@ -3,9 +3,9 @@ require "selfmodifier/models/repository"
 Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 	with_selenium do |sel|
 		sel.open "/repository/add"
-		sel.type "username-field", username
-		sel.type "repository-field", repository
-		sel.click "Add"
+		sel.type "username", username
+		sel.type "repository", repository
+		sel.click "add"
 		sel.wait_for_page 10
 	end
 end
