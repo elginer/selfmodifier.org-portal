@@ -68,3 +68,13 @@ Exception in thread "main" java.net.BindException: Selenium is already running o
 	at org.openqa.selenium.server.SeleniumServer.start(SeleniumServer.java:399)
 	at org.openqa.selenium.server.SeleniumServer.boot(SeleniumServer.java:234)
 	at org.openqa.selenium.server.SeleniumServer.main(SeleniumServer.java:198)
+20:52:33.920 WARN - Failed to start: SocketListener0@0.0.0.0:4444
+Exception in thread "main" java.net.BindException: Selenium is already running on port 4444. Or some other service is.
+	at org.openqa.selenium.server.SeleniumServer.start(SeleniumServer.java:399)
+	at org.openqa.selenium.server.SeleniumServer.boot(SeleniumServer.java:234)
+	at org.openqa.selenium.server.SeleniumServer.main(SeleniumServer.java:198)
+21:09:22.369 WARN - Failed to start: SocketListener0@0.0.0.0:4444
+Exception in thread "main" java.net.BindException: Selenium is already running on port 4444. Or some other service is.
+	at org.openqa.selenium.server.SeleniumServer.start(SeleniumServer.java:399)
+	at org.openqa.selenium.server.SeleniumServer.boot(SeleniumServer.java:234)
+	at org.openqa.selenium.server.SeleniumServer.main(SeleniumServer.java:198)

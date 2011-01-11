@@ -31,24 +31,26 @@ end
 
 # Run selfmodifer
 def fork_selfmodifier
-	fork_process "run"
+	$SERVER_PID = fork_process "run"
 	wait_connect "4567"
-	fork_process "run_selenium"
+	$SELENIUM_PID = fork_process "run_selenium"
 	wait_connect "4444"
+end
+
+# Stop running a process
+def kill pid
+	if pid
+		Process.kill "TERM", -Process.getpgid(pid)
+		Process.wait pid
+	end
 end
 
 # Stop running self modifier
 def kill_selfmodifier
-	if $SELENIUM_PID
-		Process.kill $SELENIUM_PID
-		Process.wait $SELENIUM_PID
-		$SELENIUM_PID = nil
-	end
-	if $SERVER_PID
-		Process.kill $SERVER_PID
-		Process.wait $SERVER_PID
-		$SERVER_PID = nil
-	end
+	kill $SELENIUM_PID
+	$SELENIUM_PID = nil
+	kill $SERVER_PID
+	$SERVER_PID = nil
 end
 
 # Ensure the database connection is removed
