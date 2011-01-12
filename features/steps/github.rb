@@ -15,3 +15,10 @@ Then /^a repository for (.+)\/(.+) is in the database$/ do |username, repository
 		raise "Repository not in database: #{username}/#{repository}"
 	end
 end
+
+Then /^a repository for (.+)\/(.+) is not in the database$/ do |username, repository|
+	if Repository.find_by_user_and_project(username, repository)
+		raise "Repository in database: #{username}/#{repository}"
+	end
+
+end

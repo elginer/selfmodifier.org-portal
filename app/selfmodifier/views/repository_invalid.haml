@@ -1,0 +1,13 @@
+!!! XML
+!!! Strict 
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title
+      selfmodifier.org - Invalid repository
+    %body
+      %p
+        The repository was not added, because the user and/or repository names were invalid.
+      %form{:action => "add", :method => "POST"}
+        %input{:type => "text", :name => "username"}
+        %input{:type => "text", :name => "repository"}
+        %input{:type => "submit", :name => "add", :value=>"Add"}

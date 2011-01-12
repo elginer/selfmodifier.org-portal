@@ -10,5 +10,17 @@ end
 
 # A new repository is to be added
 post "/repository/add" do
-	Repository.new :user => params[:username], :project => params[:repository]
+	username = params[:username]
+	repository = params[:repository]
+	# Test these are legal github user and repository names
+	# Prevent arbitrary links :)
+	if /^\w(-|\w)*$/.match(username) and /^(-|\w)+$/.match(repository)
+
+		repo = Repository.new :user => username, :project => repository
+		repo.save
+		haml :repository_added
+	else
+		status 403
+		haml :repository_invalid
+	end
 end

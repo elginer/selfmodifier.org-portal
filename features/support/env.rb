@@ -74,7 +74,7 @@ end
 
 # A cucucmber task to load in the database
 When /^the database is loaded$/ do
-	require "selfmodifier/database"
+	load "selfmodifier/database.rb"
 	$DATABASE_LOADED = true
 end
 
