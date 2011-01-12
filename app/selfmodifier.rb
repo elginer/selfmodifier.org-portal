@@ -24,10 +24,9 @@ module SelfModifier
 	# Load the database settings
 	require "selfmodifier/database"
 
-	# Load all controllers, models, and users
+	# Load all controllers and models
 	["selfmodifier/controllers",
-	"selfmodifier/models",
-	"selfmodifier/users"].each do |subdir|
+	"selfmodifier/models"].each do |subdir|
 		SelfModifier.require_all subdir
 	end
 

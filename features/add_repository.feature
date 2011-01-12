@@ -9,6 +9,13 @@ Feature: add repository
 		When the database is loaded
 		Then a repository for elginer/exclamation is in the database
 
+	Scenario: non-existent repository
+		When selfmodifier runs
+		Then a github repository, elginer/cooooooooool is added
+		When selfmodifier is stopped
+		When the database is loaded
+		Then a repository for elginer/cooooooooool is not in the database
+
 	Scenario: invalid github repository information
 		When selfmodifier runs
 		Then a github repository, .awesome!/../cool.html is added

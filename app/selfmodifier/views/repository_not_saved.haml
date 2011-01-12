@@ -1,13 +1,14 @@
 !!! XML
-!!! Strict 
+!!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
     %title
-      selfmodifier.org - Error: Invalid repository
+      selfmodifier.org - Error: Repository already exists.
     %body
       %p
-        The repository was not added, because the user and/or repository names were invalid.
+        The repository could not be saved because it already exists in our database.
       %form{:action => "add", :method => "POST"}
         %input{:type => "text", :name => "username"}
         %input{:type => "text", :name => "repository"}
         %input{:type => "submit", :name => "add", :value=>"Add"}
+
