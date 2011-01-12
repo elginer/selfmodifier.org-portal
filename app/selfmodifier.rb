@@ -24,9 +24,13 @@ module SelfModifier
 	# Load the database settings
 	require "selfmodifier/database"
 
+	# Load the cron system
+	require "selfmodifier/cron"
+
 	# Load all controllers and models
 	["selfmodifier/controllers",
-	"selfmodifier/models"].each do |subdir|
+	"selfmodifier/models",
+	"selfmodifier/cron"].each do |subdir|
 		SelfModifier.require_all subdir
 	end
 

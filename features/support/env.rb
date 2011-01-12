@@ -56,10 +56,15 @@ end
 
 # Ensure the database connection is removed
 def unload_database
-	if $DATABASE_LOADED == true
+#	if $DATABASE_LOADED == true
 		ActiveRecord::Base.remove_connection
-		$DATABASE_LOADED = false
-	end
+	#	$DATABASE_LOADED = false
+#	end
+end
+
+def load_database
+	load "selfmodifier/database.rb"
+	# $DATABASE_LOADED = true
 end
 
 # A cucumber task to stop selfmodifier
@@ -74,8 +79,7 @@ end
 
 # A cucucmber task to load in the database
 When /^the database is loaded$/ do
-	load "selfmodifier/database.rb"
-	$DATABASE_LOADED = true
+	load_database
 end
 
 # A cucumber task to remove the database connection
