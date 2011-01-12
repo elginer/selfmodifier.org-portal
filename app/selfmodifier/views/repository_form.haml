@@ -1,0 +1,12 @@
+.new_repository
+  %p
+    Add a new github repository to our portal, using the following form.
+  %form{:action => "add", :method => "POST"}
+    %p
+      Github user
+      %input{:type => "text", :name => "username"}
+    %p
+      Repository name      
+      %input{:type => "text", :name => "repository"}
+    %p
+      %input{:type => "submit", :name => "add", :value=>"Add"}

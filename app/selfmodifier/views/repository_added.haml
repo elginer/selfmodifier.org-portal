@@ -7,7 +7,6 @@
     %body
       %p
         A new repository has been added.
-      %form{:action => "add", :method => "POST"}
-        %input{:type => "text", :name => "username"}
-        %input{:type => "text", :name => "repository"}
-        %input{:type => "submit", :name => "add", :value=>"Add"}
+      %p= locals[:form]
+
+

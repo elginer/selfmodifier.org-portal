@@ -5,25 +5,31 @@ require "httpclient"
 
 include SelfModifier
 
+# Load up another template and use it as a form
+def repository_form page
+	add = haml :repository_form
+	haml page, :locals => {:form => add}
+end
+
 # Form to add new repository
 get "/repository/add" do
-	haml :repository_add
+	repository_form :repository_add
 end
 
 # The repository is invalid
 def invalid_repository
 	status 403
-	haml :repository_invalid
+	repository_form :repository_invalid
 end
 
 # Try to save the repository
 def unsafe_save_repository username, repository
 	repo = Repository.new :user => username, :project => repository
 	if repo.save
-		haml :repository_added
+		repository_form :repository_added
 	else
 		status 409
-		haml :repository_not_saved
+		repository_form :repository_not_saved
 	end
 end
 

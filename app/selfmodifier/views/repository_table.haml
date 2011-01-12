@@ -1,0 +1,22 @@
+%table.repository_table
+  %tr
+    %td
+      Project
+    %td
+      Owner
+    %td
+      URL
+    %td
+      Description
+  - locals[:projects].each do |rep|
+    - url = "http://github.com/#{rep.user}/#{rep.project}"
+    %tr
+      %td
+        = rep.project
+      %td
+        = rep.full_name
+      %td
+        %a{:href => url}
+          = url
+      %td
+        = rep.description
