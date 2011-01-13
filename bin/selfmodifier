@@ -1,0 +1,5 @@
+#!/usr/local/bin/ruby
+require "sinatra"
+require "./app/selfmodifier"
+
+SelfModifier.run

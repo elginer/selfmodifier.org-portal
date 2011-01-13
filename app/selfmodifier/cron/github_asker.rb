@@ -13,7 +13,6 @@ module SelfModifier
 	class GitHubAsker < Cron
 	
 		def initialize
-			@github = GitHubInterface.new	
 			reset
 		end
 
@@ -28,14 +27,14 @@ module SelfModifier
 				end
 			else
 				working = Set.new @current.take 20
+				puts "Working through #{working.size} repositories."
 				@current -= working
 				working.each do |rep|
-			        	@github.write_details rep
+			        	rep.update!
 				end
 			end
 		end
 
-		protected
 
 		# The number of minutes between runs
 		def interval
@@ -50,7 +49,9 @@ module SelfModifier
 
 		# Fetch all repositories
 		def fetch_repositories
-			Repository.all
+			Repository.all.map do |rep|
+				GitHubInterface.new rep.user, rep.project
+			end
 		end
 	end
 

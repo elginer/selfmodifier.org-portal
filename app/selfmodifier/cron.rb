@@ -7,33 +7,35 @@ module SelfModifier
 	# User cron jobs should inherit from Cron
 	class Cron
 
-		# The Cron class holds an array of jobs
-		@jobs = []
+		# The Cron class holds an array of strings representing job classes
+		# We can't just hold onto the job classes, because the reference we have to them may not be fully defined.
+		@metajobs = []
 
 		# A new cron job was created
-		def self.inherited klass
-			job = klass.new 
+		def self.inherited job 
 			Cron.more_work job
 		end
 
 		# Add a new job to the Cron class
 		def Cron.more_work job
-			@jobs.push job
+			@metajobs.push job.to_s
 		end
 
 		# Fork a cron thread
 		# Tell the jobs to execute, every minute
 		def Cron.fork
-			# If we're in development mode,
-			# then crash the whole app when this thread crashes.
-			if Sinatra::Base.development?
-				Thread.abort_on_exception = true
-			end
+			# Convert the metajobs to actual jobs
+			jobs = @metajobs.map {|meta| eval "#{meta}.new"}
 			Thread.fork do
 				loop do
-					@jobs.each do |job|
+					jobs.each do |job|
 						puts "Running minicron job: #{job.class}"
-						job.run
+						begin
+							job.run
+						rescue Exception => e
+							puts e.message
+							puts e.backtrace
+						end
 					end
 					sleep 60
 				end

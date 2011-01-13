@@ -1,3 +1,3 @@
 # Load our application
-require "./app/selfmodifier"
+require "./app/selfmodifier/database"
 require "sinatra/activerecord/rake"

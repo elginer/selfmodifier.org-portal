@@ -9,9 +9,6 @@ module SelfModifier
 	# Set the PATH
 	$:.unshift DIR
 
-	# Set the views directory
-	set :views, DIR + "/selfmodifier/views"
-
 	# Load a bunch of files from a directory
 	def SelfModifier.require_all dir
 		absolute_dir = SelfModifier::DIR + "/" + dir
@@ -21,17 +18,25 @@ module SelfModifier
 		end
 	end
 
-	# Load the database settings
-	require "selfmodifier/database"
+	# Run selfmodifier
+	def SelfModifier.run
+		# Set the views directory
+		set :views, DIR + "/selfmodifier/views"
 
-	# Load the cron system
-	require "selfmodifier/cron"
+		# Load the database settings
+		require "selfmodifier/database"
 
-	# Load all controllers and models
-	["selfmodifier/controllers",
-	"selfmodifier/models",
-	"selfmodifier/cron"].each do |subdir|
-		SelfModifier.require_all subdir
+		# Load the cron system
+		require "selfmodifier/cron"
+
+		# Load all controllers and models
+		["selfmodifier/controllers",
+		"selfmodifier/models",
+		"selfmodifier/cron"].each do |subdir|
+			SelfModifier.require_all subdir
+		end
+
+		Cron.fork
 	end
 
 end

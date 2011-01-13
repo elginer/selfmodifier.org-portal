@@ -1,22 +1,22 @@
 %table.repository_table
   %tr
     %td
-      Project
-    %td
-      Owner
+      Project Name 
     %td
       URL
     %td
       Description
+    %td
+      Last updated (UTC)
   - locals[:projects].each do |rep|
-    - url = "http://github.com/#{rep.user}/#{rep.project}"
+    - url = rep[:url]
     %tr
       %td
-        = rep.project
-      %td
-        = rep.full_name
+        = rep[:name]
       %td
         %a{:href => url}
           = url
       %td
-        = rep.description
+        = rep[:description]
+      %td
+        = rep[:update_time]
