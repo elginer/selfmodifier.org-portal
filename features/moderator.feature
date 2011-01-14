@@ -26,7 +26,7 @@ Feature: moderators
 		When a new moderator is registered
 		When selfmodifier runs
 		When the moderator logs in over the web
-		Then the title of the page is "Welcome bob"
+		Then the title of the page is "selfmodifier.org - Welcome bob"
 
 	Scenario: prevent unauthorized web-based log-in
 		Given the moderator name is "bob" and their password is "cool"
@@ -34,18 +34,18 @@ Feature: moderators
 		When selfmodifier runs
 		Given the moderator name is "sam" and their password is "awesome"
 		When the moderator logs in over the web
-		Then the title of the page is "Access denied"
+		Then the title of the page is "selfmodifier.org - Access denied"
 
 	Scenario: sessions
 		Given the moderator name is "bob" and their password is "cool"
 		When a new moderator is registered
 		When selfmodifier runs
 		When the moderator logs in over the web
-		Then the title of the page is "Welcome bob"
-		When the user browses to "/repositories/edit"
-		Then the title of the page is "Welcome bob"
+		Then the title of the page is "selfmodifier.org - Welcome bob"
+		When the user browses to "/user/moderation"
+		Then the title of the page is "selfmodifier.org - Welcome bob"
 
 	Scenario: log in required to see restricted area
 		When selfmodifier runs
-		When the user browses to "/repositories/edit"
-		Then the title of the page is "Access denied"
+		When the user browses to "/user/moderation"
+		Then the title of the page is "selfmodifier.org - Access denied"

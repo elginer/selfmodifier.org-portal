@@ -19,6 +19,7 @@ get "/" do
 		}
 	end
 
+	# TODO replace with partials in the template
 	table = haml :repository_table, :locals => {:projects => repo_hashes}
 	haml :home, :locals => {:repositories => table}
 end

@@ -27,17 +27,19 @@ end
 
 When /^the moderator logs in over the web$/ do
 	with_selenium do |sel|
-		sel.open "/login"
+		sel.open "/user/login"
 		sel.type "username", $user
 		sel.type "password", $password
-		sel.click "log in"
+		sel.click "login"
 		sel.wait_for_page 10
 		$title = sel.title
 	end
 end
 
-Then /^the title of the page is "([^"]*)"$/ do |actual|
-	$title.should eql actual
+Then /^the title of the page is "([^"]*)"$/ do |should|
+	unless $title == should 
+		raise "The title was #$title"
+	end
 end
 
 When /^the user browses to "([^"]*)"$/ do |addr|

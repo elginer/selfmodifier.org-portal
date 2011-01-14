@@ -7,6 +7,7 @@ include SelfModifier
 
 # Load up another template and use it as a form
 def repository_form page
+	# TODO replace with partials in the template 
 	add = haml :repository_form
 	haml page, :locals => {:form => add}
 end
