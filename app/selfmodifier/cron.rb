@@ -1,5 +1,7 @@
 require "sinatra/base"
 
+require "selfmodifier/lib/log"
+
 module SelfModifier
 
 	# Lightweight cron jobs that run within the server
@@ -29,12 +31,9 @@ module SelfModifier
 			Thread.fork do
 				loop do
 					jobs.each do |job|
-						puts "Running minicron job: #{job.class}"
-						begin
+						log "Running minicron job: #{job.class}"
+						with_logging do
 							job.run
-						rescue Exception => e
-							puts e.message
-							puts e.backtrace
 						end
 					end
 					sleep 60

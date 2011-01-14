@@ -10,9 +10,9 @@ get "/" do
 	# by converting the repositories to hashes
 	repo_hashes = repositories.map do |rep|
 		{
-			:description => rep.description,
+			:description => rep.safe_description,
 			# Tiny performance boost, putting this in database?
-			:url => "http://github.com/#{rep.user}/#{rep.project}",
+			:url => rep.url,
 			:update_time => rep.updated,
 			:name => rep.project
 

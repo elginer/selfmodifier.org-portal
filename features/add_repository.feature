@@ -9,6 +9,16 @@ Feature: add repository
 		When the database is loaded
 		Then a repository for elginer/exclamation is in the database
 
+	# There was a bug, so this checks it was fixed
+	Scenario: two repositories by same user
+		When selfmodifier runs
+		Then a github repository, elginer/exclamation is added
+		Then a github repository, elginer/carps is added
+		When selfmodifier is stopped
+		When the database is loaded
+		Then a repository for elginer/exclamation is in the database
+		Then a repository for elginer/carps is in the database
+
 	Scenario: non-existent repository
 		When selfmodifier runs
 		Then a github repository, elginer/cooooooooool is added

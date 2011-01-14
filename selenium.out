@@ -2401,3 +2401,325 @@
 16:32:03.395 INFO - Killing Firefox...
 16:32:03.408 INFO - Got result: OK on session a64c25ea5ded45778b174b31bed73ae6
 16:32:03.410 INFO - Shutting down...
+14:38:18.080 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:38:18.124 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:38:18.203 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:38:18.596 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:38:18.597 INFO - Version Jetty/5.1.x
+14:38:18.598 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:38:18.621 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:38:18.621 INFO - Started HttpContext[/,/]
+14:38:36.764 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7cf1bb78
+14:38:36.764 INFO - Started HttpContext[/wd,/wd]
+14:38:36.788 INFO - Started SocketListener on 0.0.0.0:4444
+14:38:36.788 INFO - Started org.openqa.jetty.jetty.Server@9d04653
+14:38:38.487 INFO - Checking Resource aliases
+14:38:38.501 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:38:38.529 INFO - creating new remote session
+14:38:38.730 INFO - Allocated session aedddfc06e384843aa06ccad67b8cfcf for http://localhost:4567, launching...
+14:38:38.837 INFO - Preparing Firefox profile...
+14:38:40.876 INFO - Launching Firefox...
+14:38:42.732 INFO - Got result: OK,aedddfc06e384843aa06ccad67b8cfcf on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:42.734 INFO - Command request: setTimeout[300000, ] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:42.741 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:42.743 INFO - Command request: open[/repository/add, ] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.003 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.006 INFO - Command request: type[username, elginer] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.024 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.027 INFO - Command request: type[repository, exclamation] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.043 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.045 INFO - Command request: click[add, ] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.062 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:43.064 INFO - Command request: waitForPageToLoad[10000, ] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:44.369 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:44.372 INFO - Command request: testComplete[, ] on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:44.372 INFO - Killing Firefox...
+14:38:44.411 INFO - Got result: OK on session aedddfc06e384843aa06ccad67b8cfcf
+14:38:44.445 INFO - Shutting down...
+14:38:47.508 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:38:47.509 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:38:47.514 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:38:47.574 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:38:47.575 INFO - Version Jetty/5.1.x
+14:38:47.576 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:38:47.576 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:38:47.576 INFO - Started HttpContext[/,/]
+14:38:49.206 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7f2a3793
+14:38:49.206 INFO - Started HttpContext[/wd,/wd]
+14:38:49.209 INFO - Started SocketListener on 0.0.0.0:4444
+14:38:49.209 INFO - Started org.openqa.jetty.jetty.Server@66388993
+14:38:50.422 INFO - Checking Resource aliases
+14:38:50.425 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:38:50.427 INFO - creating new remote session
+14:38:50.479 INFO - Allocated session 5cbc8c4c728f49269a60bc303dec3556 for http://localhost:4567, launching...
+14:38:50.505 INFO - Preparing Firefox profile...
+14:38:52.419 INFO - Launching Firefox...
+14:38:54.023 INFO - Got result: OK,5cbc8c4c728f49269a60bc303dec3556 on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.025 INFO - Command request: setTimeout[300000, ] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.045 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.047 INFO - Command request: open[/repository/add, ] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.298 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.301 INFO - Command request: type[username, elginer] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.320 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.322 INFO - Command request: type[repository, exclamation] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.341 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.344 INFO - Command request: click[add, ] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.364 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:54.366 INFO - Command request: waitForPageToLoad[10000, ] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:55.290 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:55.292 INFO - Command request: testComplete[, ] on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:55.293 INFO - Killing Firefox...
+14:38:55.306 INFO - Got result: OK on session 5cbc8c4c728f49269a60bc303dec3556
+14:38:55.308 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:38:55.308 INFO - creating new remote session
+14:38:55.309 INFO - Allocated session e31171d9b2c44460bbfdc7170e2ba723 for http://localhost:4567, launching...
+14:38:55.324 INFO - Preparing Firefox profile...
+14:38:57.242 INFO - Launching Firefox...
+14:38:58.796 INFO - Got result: OK,e31171d9b2c44460bbfdc7170e2ba723 on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.799 INFO - Command request: setTimeout[300000, ] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.815 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.817 INFO - Command request: open[/repository/add, ] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.896 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.898 INFO - Command request: type[username, elginer] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.914 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.916 INFO - Command request: type[repository, carps] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.931 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.933 INFO - Command request: click[add, ] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.951 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:58.953 INFO - Command request: waitForPageToLoad[10000, ] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:59.816 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:59.818 INFO - Command request: testComplete[, ] on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:59.818 INFO - Killing Firefox...
+14:38:59.824 INFO - Got result: OK on session e31171d9b2c44460bbfdc7170e2ba723
+14:38:59.826 INFO - Shutting down...
+14:39:01.814 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:39:01.815 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:39:01.821 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:39:01.882 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:39:01.882 INFO - Version Jetty/5.1.x
+14:39:01.883 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:39:01.884 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:39:01.884 INFO - Started HttpContext[/,/]
+14:39:01.892 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7f2a3793
+14:39:01.893 INFO - Started HttpContext[/wd,/wd]
+14:39:01.895 INFO - Started SocketListener on 0.0.0.0:4444
+14:39:01.895 INFO - Started org.openqa.jetty.jetty.Server@9d04653
+14:39:03.727 INFO - Checking Resource aliases
+14:39:03.730 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:39:03.731 INFO - creating new remote session
+14:39:03.783 INFO - Allocated session 56683717e2964766a62f03102f5391be for http://localhost:4567, launching...
+14:39:03.810 INFO - Preparing Firefox profile...
+14:39:05.728 INFO - Launching Firefox...
+14:39:07.291 INFO - Got result: OK,56683717e2964766a62f03102f5391be on session 56683717e2964766a62f03102f5391be
+14:39:07.294 INFO - Command request: setTimeout[300000, ] on session 56683717e2964766a62f03102f5391be
+14:39:07.303 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:07.306 INFO - Command request: open[/repository/add, ] on session 56683717e2964766a62f03102f5391be
+14:39:07.565 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:07.568 INFO - Command request: type[username, elginer] on session 56683717e2964766a62f03102f5391be
+14:39:07.587 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:07.589 INFO - Command request: type[repository, cooooooooool] on session 56683717e2964766a62f03102f5391be
+14:39:07.608 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:07.611 INFO - Command request: click[add, ] on session 56683717e2964766a62f03102f5391be
+14:39:07.631 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:07.633 INFO - Command request: waitForPageToLoad[10000, ] on session 56683717e2964766a62f03102f5391be
+14:39:08.439 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:08.443 INFO - Command request: testComplete[, ] on session 56683717e2964766a62f03102f5391be
+14:39:08.443 INFO - Killing Firefox...
+14:39:08.456 INFO - Got result: OK on session 56683717e2964766a62f03102f5391be
+14:39:08.458 INFO - Shutting down...
+14:39:11.435 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:39:11.436 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:39:11.441 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:39:11.501 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:39:11.502 INFO - Version Jetty/5.1.x
+14:39:11.502 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:39:11.503 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:39:11.503 INFO - Started HttpContext[/,/]
+14:39:12.307 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+14:39:12.307 INFO - Started HttpContext[/wd,/wd]
+14:39:12.309 INFO - Started SocketListener on 0.0.0.0:4444
+14:39:12.309 INFO - Started org.openqa.jetty.jetty.Server@48b8f82d
+14:39:13.347 INFO - Checking Resource aliases
+14:39:13.350 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:39:13.352 INFO - creating new remote session
+14:39:13.404 INFO - Allocated session 71d56234a4d44b00be291cf9e420345c for http://localhost:4567, launching...
+14:39:13.431 INFO - Preparing Firefox profile...
+14:39:15.349 INFO - Launching Firefox...
+14:39:16.900 INFO - Got result: OK,71d56234a4d44b00be291cf9e420345c on session 71d56234a4d44b00be291cf9e420345c
+14:39:16.902 INFO - Command request: setTimeout[300000, ] on session 71d56234a4d44b00be291cf9e420345c
+14:39:16.917 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:16.919 INFO - Command request: open[/repository/add, ] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.182 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.184 INFO - Command request: type[username, .awesome!/..] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.204 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.206 INFO - Command request: type[repository, cool.html] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.224 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.226 INFO - Command request: click[add, ] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.246 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.248 INFO - Command request: waitForPageToLoad[10000, ] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.300 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.302 INFO - Command request: testComplete[, ] on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.302 INFO - Killing Firefox...
+14:39:17.314 INFO - Got result: OK on session 71d56234a4d44b00be291cf9e420345c
+14:39:17.317 INFO - Shutting down...
+14:45:39.030 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:45:39.031 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:45:39.037 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:45:39.095 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:45:39.096 INFO - Version Jetty/5.1.x
+14:45:39.097 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:45:39.097 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:45:39.097 INFO - Started HttpContext[/,/]
+14:45:39.106 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7f2a3793
+14:45:39.106 INFO - Started HttpContext[/wd,/wd]
+14:45:39.108 INFO - Started SocketListener on 0.0.0.0:4444
+14:45:39.108 INFO - Started org.openqa.jetty.jetty.Server@66388993
+14:45:40.943 INFO - Checking Resource aliases
+14:45:40.946 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:45:40.948 INFO - creating new remote session
+14:45:40.999 INFO - Allocated session fa43a95dea984ee1afea413b458e71eb for http://localhost:4567, launching...
+14:45:41.025 INFO - Preparing Firefox profile...
+14:45:42.939 INFO - Launching Firefox...
+14:45:44.503 INFO - Got result: OK,fa43a95dea984ee1afea413b458e71eb on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.505 INFO - Command request: setTimeout[300000, ] on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.523 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.525 INFO - Command request: open[/repository/add, ] on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.782 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.784 INFO - Command request: type[username, elginer] on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.805 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.807 INFO - Command request: type[repository, exclamation] on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.826 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.828 INFO - Command request: click[add, ] on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.848 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:44.850 INFO - Command request: waitForPageToLoad[10000, ] on session fa43a95dea984ee1afea413b458e71eb
+14:45:45.766 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:45.768 INFO - Command request: testComplete[, ] on session fa43a95dea984ee1afea413b458e71eb
+14:45:45.768 INFO - Killing Firefox...
+14:45:45.781 INFO - Got result: OK on session fa43a95dea984ee1afea413b458e71eb
+14:45:45.783 INFO - Shutting down...
+14:45:48.873 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:45:48.874 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:45:48.879 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:45:48.938 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:45:48.939 INFO - Version Jetty/5.1.x
+14:45:48.939 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:45:48.940 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:45:48.940 INFO - Started HttpContext[/,/]
+14:46:07.794 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+14:46:07.794 INFO - Started HttpContext[/wd,/wd]
+14:46:07.798 INFO - Started SocketListener on 0.0.0.0:4444
+14:46:07.798 INFO - Started org.openqa.jetty.jetty.Server@66388993
+14:46:09.792 INFO - Checking Resource aliases
+14:46:09.796 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:46:09.797 INFO - creating new remote session
+14:46:09.849 INFO - Allocated session 42ba210c312a4acc93d52c35b695fb17 for http://localhost:4567, launching...
+14:46:09.888 INFO - Preparing Firefox profile...
+14:46:11.807 INFO - Launching Firefox...
+14:46:13.384 INFO - Got result: OK,42ba210c312a4acc93d52c35b695fb17 on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.386 INFO - Command request: setTimeout[300000, ] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.402 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.405 INFO - Command request: open[/repository/add, ] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.680 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.683 INFO - Command request: type[username, elginer] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.702 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.704 INFO - Command request: type[repository, exclamation] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.723 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.726 INFO - Command request: click[add, ] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.746 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:13.748 INFO - Command request: waitForPageToLoad[10000, ] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:14.663 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:14.665 INFO - Command request: testComplete[, ] on session 42ba210c312a4acc93d52c35b695fb17
+14:46:14.665 INFO - Killing Firefox...
+14:46:14.678 INFO - Got result: OK on session 42ba210c312a4acc93d52c35b695fb17
+14:46:14.680 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:46:14.680 INFO - creating new remote session
+14:46:14.681 INFO - Allocated session 4c23dcf19b4a492ba8cca670248e88b0 for http://localhost:4567, launching...
+14:46:14.696 INFO - Preparing Firefox profile...
+14:46:16.614 INFO - Launching Firefox...
+14:46:18.173 INFO - Got result: OK,4c23dcf19b4a492ba8cca670248e88b0 on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.175 INFO - Command request: setTimeout[300000, ] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.190 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.192 INFO - Command request: open[/repository/add, ] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.272 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.274 INFO - Command request: type[username, elginer] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.289 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.291 INFO - Command request: type[repository, carps] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.306 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.308 INFO - Command request: click[add, ] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.326 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:18.328 INFO - Command request: waitForPageToLoad[10000, ] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:19.192 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:19.194 INFO - Command request: testComplete[, ] on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:19.195 INFO - Killing Firefox...
+14:46:19.200 INFO - Got result: OK on session 4c23dcf19b4a492ba8cca670248e88b0
+14:46:19.203 INFO - Shutting down...
+14:46:21.150 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:46:21.151 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:46:21.156 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:46:21.215 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:46:21.216 INFO - Version Jetty/5.1.x
+14:46:21.217 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:46:21.217 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:46:21.217 INFO - Started HttpContext[/,/]
+14:46:22.549 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7f2a3793
+14:46:22.549 INFO - Started HttpContext[/wd,/wd]
+14:46:22.552 INFO - Started SocketListener on 0.0.0.0:4444
+14:46:22.552 INFO - Started org.openqa.jetty.jetty.Server@66388993
+14:46:24.063 INFO - Checking Resource aliases
+14:46:24.066 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:46:24.068 INFO - creating new remote session
+14:46:24.120 INFO - Allocated session 07409e4b3a404bcb9904b7fa998e5af5 for http://localhost:4567, launching...
+14:46:24.146 INFO - Preparing Firefox profile...
+14:46:26.062 INFO - Launching Firefox...
+14:46:27.626 INFO - Got result: OK,07409e4b3a404bcb9904b7fa998e5af5 on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.629 INFO - Command request: setTimeout[300000, ] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.644 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.646 INFO - Command request: open[/repository/add, ] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.910 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.912 INFO - Command request: type[username, elginer] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.931 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.933 INFO - Command request: type[repository, cooooooooool] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.952 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.954 INFO - Command request: click[add, ] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.974 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:27.976 INFO - Command request: waitForPageToLoad[10000, ] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:28.780 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:28.782 INFO - Command request: testComplete[, ] on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:28.782 INFO - Killing Firefox...
+14:46:28.796 INFO - Got result: OK on session 07409e4b3a404bcb9904b7fa998e5af5
+14:46:28.798 INFO - Shutting down...
+14:46:30.761 INFO - Java: Sun Microsystems Inc. 19.0-b06
+14:46:30.762 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+14:46:30.767 INFO - v2.0 [a2], with Core v2.0 [a2]
+14:46:30.827 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+14:46:30.827 INFO - Version Jetty/5.1.x
+14:46:30.828 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+14:46:30.829 INFO - Started HttpContext[/selenium-server,/selenium-server]
+14:46:30.829 INFO - Started HttpContext[/,/]
+14:46:30.837 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7f2a3793
+14:46:30.837 INFO - Started HttpContext[/wd,/wd]
+14:46:30.840 INFO - Started SocketListener on 0.0.0.0:4444
+14:46:30.840 INFO - Started org.openqa.jetty.jetty.Server@9d04653
+14:46:32.673 INFO - Checking Resource aliases
+14:46:32.676 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+14:46:32.677 INFO - creating new remote session
+14:46:32.728 INFO - Allocated session fce910dc27a54b50807c95954682aade for http://localhost:4567, launching...
+14:46:32.754 INFO - Preparing Firefox profile...
+14:46:34.665 INFO - Launching Firefox...
+14:46:36.228 INFO - Got result: OK,fce910dc27a54b50807c95954682aade on session fce910dc27a54b50807c95954682aade
+14:46:36.230 INFO - Command request: setTimeout[300000, ] on session fce910dc27a54b50807c95954682aade
+14:46:36.246 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.248 INFO - Command request: open[/repository/add, ] on session fce910dc27a54b50807c95954682aade
+14:46:36.514 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.516 INFO - Command request: type[username, .awesome!/..] on session fce910dc27a54b50807c95954682aade
+14:46:36.535 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.538 INFO - Command request: type[repository, cool.html] on session fce910dc27a54b50807c95954682aade
+14:46:36.557 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.559 INFO - Command request: click[add, ] on session fce910dc27a54b50807c95954682aade
+14:46:36.579 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.581 INFO - Command request: waitForPageToLoad[10000, ] on session fce910dc27a54b50807c95954682aade
+14:46:36.633 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.635 INFO - Command request: testComplete[, ] on session fce910dc27a54b50807c95954682aade
+14:46:36.635 INFO - Killing Firefox...
+14:46:36.648 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
+14:46:36.650 INFO - Shutting down...

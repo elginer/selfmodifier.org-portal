@@ -1,4 +1,5 @@
 require "selfmodifier/models/repository"
+require "selfmodifier/lib/log"
 
 require "httpclient"
 
@@ -30,10 +31,11 @@ module SelfModifier
 			if repo = Repository.find_by_user_and_project(@user, @project)
 				repo.updated = @push_time
 				repo.description = @description
-				unless repo.save
-					STDERR.puts "#{self.class} could not save repository."
+				if repo.save				
+					puts "Repository #@user/#@project has been updated."
+				else
+					log_error "Repository #@user/#@project could not be saved."
 				end
-				puts "Repository #{@user}/#{@project} has been updated."
 			end
 		end
 
@@ -46,13 +48,15 @@ module SelfModifier
 
 		# Request an update from github
 		def web_request 
-			url = "http://github.com/api/v2/json/repos/show/#{@user}/#{@project}"
-			puts "GET #{url}"
-			client = HTTPClient.new
-			raw = client.get(url).body.dump
-			repo_hash = JSON.parse(raw)["repository"]
-			@push_time = DateTime.parse(repo_hash["pushed_at"]).to_time
-			@description = repo_hash["description"]
+			with_logging do
+				url = "http://github.com/api/v2/json/repos/show/#{@user}/#{@project}"
+				puts "GET #{url}"
+				client = HTTPClient.new
+				raw = client.get(url).body.dump
+				repo_hash = JSON.parse(raw)["repository"]
+				@push_time = DateTime.parse(repo_hash["pushed_at"]).to_time
+				@description = repo_hash["description"]
+			end
 		end
 
 	end

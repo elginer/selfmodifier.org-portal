@@ -31,7 +31,7 @@ Feature: ask github for information on the repositories
 		# NOTE this is cucumber anti pattern!
 		# This is an implementation detail
 		When all repositires are switched to unqueried
-		Then it is run by the cron system 30 times
+		Then it is run by the cron system 10 times
 		When it asks github for information
 		Then 20 repositories remain unqueried
 		When it asks github for information

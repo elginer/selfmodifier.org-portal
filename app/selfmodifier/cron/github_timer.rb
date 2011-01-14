@@ -4,13 +4,14 @@ require "selfmodifier/database"
 require "selfmodifier/models/repository"
 
 require "selfmodifier/lib/github_interface"
+require "selfmodifier/lib/log"
 
 require "set"
 
 module SelfModifier
 
 	# Communicate with github, on a regular basis, to find information about the repositories
-	class GitHubAsker < Cron
+	class GitHubTimer < Cron
 	
 		def initialize
 			reset
@@ -27,7 +28,7 @@ module SelfModifier
 				end
 			else
 				working = Set.new @current.take 20
-				puts "Working through #{working.size} repositories."
+				log "Working through #{working.size} repositories."
 				@current -= working
 				working.each do |rep|
 			        	rep.update!
@@ -38,7 +39,7 @@ module SelfModifier
 
 		# The number of minutes between runs
 		def interval
-			30
+			10	
 		end
 
 		# Reset the jobs list

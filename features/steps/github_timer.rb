@@ -1,4 +1,4 @@
-require "selfmodifier/cron/github_asker.rb"
+require "selfmodifier/cron/github_timer.rb"
 
 # The github interface is associated with a unique number in our system
 # This means we can keep track of which repositories we have updated
@@ -16,8 +16,8 @@ class MockGitHubInterface
 
 end
 
-# Cripple network communication for GitHubAsker
-class GitHubAsker
+# Cripple network communication for GitHubTimer
+class GitHubTimer
 
 	def fetch_repositories
 		$all.map {|rep| MockGitHubInterface.new rep}
@@ -29,7 +29,7 @@ Given /^a github asker with (\d+) repositories$/ do |fakers|
 	n = fakers.to_i
 	$all = Set.new 1..n
 	$unqueried = $all.clone
-	$asker = GitHubAsker.new
+	$asker = GitHubTimer.new
 	$total_requests = 0
 end
 
