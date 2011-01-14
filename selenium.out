@@ -2723,3 +2723,273 @@
 14:46:36.635 INFO - Killing Firefox...
 14:46:36.648 INFO - Got result: OK on session fce910dc27a54b50807c95954682aade
 14:46:36.650 INFO - Shutting down...
+15:49:40.666 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:49:40.667 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:49:40.672 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:49:40.731 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:49:40.732 INFO - Version Jetty/5.1.x
+15:49:40.732 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:49:40.733 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:49:40.733 INFO - Started HttpContext[/,/]
+15:49:40.741 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+15:49:40.742 INFO - Started HttpContext[/wd,/wd]
+15:49:40.744 INFO - Started SocketListener on 0.0.0.0:4444
+15:49:40.744 INFO - Started org.openqa.jetty.jetty.Server@48b8f82d
+15:49:42.579 INFO - Checking Resource aliases
+15:49:42.583 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:49:42.584 INFO - creating new remote session
+15:49:42.636 INFO - Allocated session 095f9753bf82494693b8b4e8d4c0cd92 for http://localhost:4567, launching...
+15:49:42.662 INFO - Preparing Firefox profile...
+15:49:44.573 INFO - Launching Firefox...
+15:49:46.151 INFO - Got result: OK,095f9753bf82494693b8b4e8d4c0cd92 on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.154 INFO - Command request: setTimeout[300000, ] on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.189 INFO - Got result: OK on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.191 INFO - Command request: open[/login, ] on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.217 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.220 INFO - Command request: testComplete[, ] on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.220 INFO - Killing Firefox...
+15:49:46.232 INFO - Got result: OK on session 095f9753bf82494693b8b4e8d4c0cd92
+15:49:46.235 INFO - Shutting down...
+15:49:49.020 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:49:49.021 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:49:49.026 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:49:49.086 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:49:49.087 INFO - Version Jetty/5.1.x
+15:49:49.087 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:49:49.088 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:49:49.088 INFO - Started HttpContext[/,/]
+15:49:49.639 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@329f671b
+15:49:49.640 INFO - Started HttpContext[/wd,/wd]
+15:49:49.642 INFO - Started SocketListener on 0.0.0.0:4444
+15:49:49.642 INFO - Started org.openqa.jetty.jetty.Server@66388993
+15:49:50.931 INFO - Checking Resource aliases
+15:49:50.934 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:49:50.936 INFO - creating new remote session
+15:49:50.987 INFO - Allocated session e3f9ce52f56240d6a86505507a1b03f2 for http://localhost:4567, launching...
+15:49:51.014 INFO - Preparing Firefox profile...
+15:49:52.932 INFO - Launching Firefox...
+15:49:54.521 INFO - Got result: OK,e3f9ce52f56240d6a86505507a1b03f2 on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.523 INFO - Command request: setTimeout[300000, ] on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.583 INFO - Got result: OK on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.585 INFO - Command request: open[/login, ] on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.616 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.618 INFO - Command request: testComplete[, ] on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.618 INFO - Killing Firefox...
+15:49:54.631 INFO - Got result: OK on session e3f9ce52f56240d6a86505507a1b03f2
+15:49:54.633 INFO - Shutting down...
+15:50:17.001 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:50:17.002 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:50:17.008 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:50:17.067 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:50:17.068 INFO - Version Jetty/5.1.x
+15:50:17.069 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:50:17.069 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:50:17.069 INFO - Started HttpContext[/,/]
+15:50:54.815 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+15:50:54.815 INFO - Started HttpContext[/wd,/wd]
+15:50:54.818 INFO - Started SocketListener on 0.0.0.0:4444
+15:50:54.818 INFO - Started org.openqa.jetty.jetty.Server@66388993
+15:50:55.925 INFO - Checking Resource aliases
+15:50:55.928 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:50:55.930 INFO - creating new remote session
+15:50:55.982 INFO - Allocated session 23994d93d4554d5b901b326fb934825a for http://localhost:4567, launching...
+15:50:56.007 INFO - Preparing Firefox profile...
+15:50:57.928 INFO - Launching Firefox...
+15:50:59.492 INFO - Got result: OK,23994d93d4554d5b901b326fb934825a on session 23994d93d4554d5b901b326fb934825a
+15:50:59.495 INFO - Command request: setTimeout[300000, ] on session 23994d93d4554d5b901b326fb934825a
+15:50:59.511 INFO - Got result: OK on session 23994d93d4554d5b901b326fb934825a
+15:50:59.513 INFO - Command request: open[/login, ] on session 23994d93d4554d5b901b326fb934825a
+15:50:59.539 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session 23994d93d4554d5b901b326fb934825a
+15:50:59.541 INFO - Command request: testComplete[, ] on session 23994d93d4554d5b901b326fb934825a
+15:50:59.541 INFO - Killing Firefox...
+15:50:59.554 INFO - Got result: OK on session 23994d93d4554d5b901b326fb934825a
+15:50:59.556 INFO - Shutting down...
+15:51:02.342 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:51:02.343 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:51:02.349 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:51:02.409 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:51:02.409 INFO - Version Jetty/5.1.x
+15:51:02.410 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:51:02.410 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:51:02.411 INFO - Started HttpContext[/,/]
+15:51:02.419 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@329f671b
+15:51:02.419 INFO - Started HttpContext[/wd,/wd]
+15:51:02.422 INFO - Started SocketListener on 0.0.0.0:4444
+15:51:02.422 INFO - Started org.openqa.jetty.jetty.Server@66388993
+15:51:04.255 INFO - Checking Resource aliases
+15:51:04.258 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:51:04.260 INFO - creating new remote session
+15:51:04.313 INFO - Allocated session 988f9f828eae41128ae6e305bad7b6ed for http://localhost:4567, launching...
+15:51:04.340 INFO - Preparing Firefox profile...
+15:51:06.260 INFO - Launching Firefox...
+15:51:07.818 INFO - Got result: OK,988f9f828eae41128ae6e305bad7b6ed on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.821 INFO - Command request: setTimeout[300000, ] on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.850 INFO - Got result: OK on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.852 INFO - Command request: open[/login, ] on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.881 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.884 INFO - Command request: testComplete[, ] on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.884 INFO - Killing Firefox...
+15:51:07.897 INFO - Got result: OK on session 988f9f828eae41128ae6e305bad7b6ed
+15:51:07.900 INFO - Shutting down...
+15:51:10.665 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:51:10.666 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:51:10.671 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:51:10.730 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:51:10.731 INFO - Version Jetty/5.1.x
+15:51:10.731 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:51:10.732 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:51:10.732 INFO - Started HttpContext[/,/]
+15:51:10.740 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+15:51:10.740 INFO - Started HttpContext[/wd,/wd]
+15:51:10.743 INFO - Started SocketListener on 0.0.0.0:4444
+15:51:10.743 INFO - Started org.openqa.jetty.jetty.Server@48b8f82d
+15:51:12.577 INFO - Checking Resource aliases
+15:51:12.581 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:51:12.582 INFO - creating new remote session
+15:51:12.633 INFO - Allocated session c1201102bd06408e9464b287f1c14b85 for http://localhost:4567, launching...
+15:51:12.659 INFO - Preparing Firefox profile...
+15:51:14.570 INFO - Launching Firefox...
+15:51:16.126 INFO - Got result: OK,c1201102bd06408e9464b287f1c14b85 on session c1201102bd06408e9464b287f1c14b85
+15:51:16.129 INFO - Command request: setTimeout[300000, ] on session c1201102bd06408e9464b287f1c14b85
+15:51:16.146 INFO - Got result: OK on session c1201102bd06408e9464b287f1c14b85
+15:51:16.148 INFO - Command request: open[/login, ] on session c1201102bd06408e9464b287f1c14b85
+15:51:16.177 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session c1201102bd06408e9464b287f1c14b85
+15:51:16.180 INFO - Command request: testComplete[, ] on session c1201102bd06408e9464b287f1c14b85
+15:51:16.180 INFO - Killing Firefox...
+15:51:16.192 INFO - Got result: OK on session c1201102bd06408e9464b287f1c14b85
+15:51:16.196 INFO - Shutting down...
+15:51:18.260 INFO - Java: Sun Microsystems Inc. 19.0-b06
+15:51:18.261 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+15:51:18.266 INFO - v2.0 [a2], with Core v2.0 [a2]
+15:51:18.325 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+15:51:18.326 INFO - Version Jetty/5.1.x
+15:51:18.327 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:51:18.327 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:51:18.327 INFO - Started HttpContext[/,/]
+15:51:24.346 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@2ca6d51e
+15:51:24.346 INFO - Started HttpContext[/wd,/wd]
+15:51:24.349 INFO - Started SocketListener on 0.0.0.0:4444
+15:51:24.349 INFO - Started org.openqa.jetty.jetty.Server@66388993
+15:51:26.176 INFO - Checking Resource aliases
+15:51:26.179 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+15:51:26.181 INFO - creating new remote session
+15:51:26.234 INFO - Allocated session bacaeb742a5b4af7ab6578cca420a634 for http://localhost:4567, launching...
+15:51:26.260 INFO - Preparing Firefox profile...
+15:51:28.192 INFO - Launching Firefox...
+15:51:29.776 INFO - Got result: OK,bacaeb742a5b4af7ab6578cca420a634 on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.778 INFO - Command request: setTimeout[300000, ] on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.796 INFO - Got result: OK on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.798 INFO - Command request: open[/repositories/edit, ] on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.828 INFO - Got result: XHR ERROR: URL = http://localhost:4567/repositories/edit Response_Code = 404 Error_Message = Not Found  on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.830 INFO - Command request: testComplete[, ] on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.830 INFO - Killing Firefox...
+15:51:29.843 INFO - Got result: OK on session bacaeb742a5b4af7ab6578cca420a634
+15:51:29.846 INFO - Shutting down...
+16:01:05.513 INFO - Java: Sun Microsystems Inc. 19.0-b06
+16:01:05.514 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+16:01:05.519 INFO - v2.0 [a2], with Core v2.0 [a2]
+16:01:05.577 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+16:01:05.578 INFO - Version Jetty/5.1.x
+16:01:05.579 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+16:01:05.579 INFO - Started HttpContext[/selenium-server,/selenium-server]
+16:01:05.579 INFO - Started HttpContext[/,/]
+16:01:05.588 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@329f671b
+16:01:05.588 INFO - Started HttpContext[/wd,/wd]
+16:01:05.590 INFO - Started SocketListener on 0.0.0.0:4444
+16:01:05.591 INFO - Started org.openqa.jetty.jetty.Server@66388993
+16:01:07.422 INFO - Checking Resource aliases
+16:01:07.425 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+16:01:07.427 INFO - creating new remote session
+16:01:07.478 INFO - Allocated session 40912aa14d3a456eb306015d98cbbda7 for http://localhost:4567, launching...
+16:01:07.505 INFO - Preparing Firefox profile...
+16:01:09.418 INFO - Launching Firefox...
+16:01:10.984 INFO - Got result: OK,40912aa14d3a456eb306015d98cbbda7 on session 40912aa14d3a456eb306015d98cbbda7
+16:01:10.987 INFO - Command request: setTimeout[300000, ] on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.037 INFO - Got result: OK on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.039 INFO - Command request: open[/login, ] on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.069 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.071 INFO - Command request: testComplete[, ] on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.071 INFO - Killing Firefox...
+16:01:11.099 INFO - Got result: OK on session 40912aa14d3a456eb306015d98cbbda7
+16:01:11.102 INFO - Shutting down...
+16:01:13.887 INFO - Java: Sun Microsystems Inc. 19.0-b06
+16:01:13.888 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+16:01:13.893 INFO - v2.0 [a2], with Core v2.0 [a2]
+16:01:13.952 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+16:01:13.953 INFO - Version Jetty/5.1.x
+16:01:13.953 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+16:01:13.954 INFO - Started HttpContext[/selenium-server,/selenium-server]
+16:01:13.954 INFO - Started HttpContext[/,/]
+16:01:48.124 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@7cf1bb78
+16:01:48.124 INFO - Started HttpContext[/wd,/wd]
+16:01:48.127 INFO - Started SocketListener on 0.0.0.0:4444
+16:01:48.127 INFO - Started org.openqa.jetty.jetty.Server@9d04653
+16:01:49.811 INFO - Checking Resource aliases
+16:01:49.814 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+16:01:49.815 INFO - creating new remote session
+16:01:49.869 INFO - Allocated session d2da4c6f1d144eb48495f1a6c4394321 for http://localhost:4567, launching...
+16:01:49.895 INFO - Preparing Firefox profile...
+16:01:51.819 INFO - Launching Firefox...
+16:01:53.406 INFO - Got result: OK,d2da4c6f1d144eb48495f1a6c4394321 on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.408 INFO - Command request: setTimeout[300000, ] on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.424 INFO - Got result: OK on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.426 INFO - Command request: open[/login, ] on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.452 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.454 INFO - Command request: testComplete[, ] on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.454 INFO - Killing Firefox...
+16:01:53.467 INFO - Got result: OK on session d2da4c6f1d144eb48495f1a6c4394321
+16:01:53.470 INFO - Shutting down...
+16:01:56.278 INFO - Java: Sun Microsystems Inc. 19.0-b06
+16:01:56.279 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+16:01:56.285 INFO - v2.0 [a2], with Core v2.0 [a2]
+16:01:56.344 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+16:01:56.345 INFO - Version Jetty/5.1.x
+16:01:56.346 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+16:01:56.346 INFO - Started HttpContext[/selenium-server,/selenium-server]
+16:01:56.346 INFO - Started HttpContext[/,/]
+16:01:56.355 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@329f671b
+16:01:56.355 INFO - Started HttpContext[/wd,/wd]
+16:01:56.357 INFO - Started SocketListener on 0.0.0.0:4444
+16:01:56.358 INFO - Started org.openqa.jetty.jetty.Server@66388993
+16:01:58.191 INFO - Checking Resource aliases
+16:01:58.194 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+16:01:58.196 INFO - creating new remote session
+16:01:58.248 INFO - Allocated session d74bfaa60849436dbbfee2d1509dc374 for http://localhost:4567, launching...
+16:01:58.275 INFO - Preparing Firefox profile...
+16:02:00.193 INFO - Launching Firefox...
+16:02:01.769 INFO - Got result: OK,d74bfaa60849436dbbfee2d1509dc374 on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.772 INFO - Command request: setTimeout[300000, ] on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.789 INFO - Got result: OK on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.791 INFO - Command request: open[/login, ] on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.821 INFO - Got result: XHR ERROR: URL = http://localhost:4567/login Response_Code = 404 Error_Message = Not Found  on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.824 INFO - Command request: testComplete[, ] on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.824 INFO - Killing Firefox...
+16:02:01.836 INFO - Got result: OK on session d74bfaa60849436dbbfee2d1509dc374
+16:02:01.840 INFO - Shutting down...
+16:02:03.911 INFO - Java: Sun Microsystems Inc. 19.0-b06
+16:02:03.912 INFO - OS: Linux 2.6.36-gentoo-r5 amd64
+16:02:03.917 INFO - v2.0 [a2], with Core v2.0 [a2]
+16:02:03.977 INFO - RemoteWebDriver instances should connect to: http://192.168.0.101:4444/wd/hub
+16:02:03.977 INFO - Version Jetty/5.1.x
+16:02:03.978 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+16:02:03.979 INFO - Started HttpContext[/selenium-server,/selenium-server]
+16:02:03.979 INFO - Started HttpContext[/,/]
+16:02:03.987 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@329f671b
+16:02:03.987 INFO - Started HttpContext[/wd,/wd]
+16:02:03.990 INFO - Started SocketListener on 0.0.0.0:4444
+16:02:03.990 INFO - Started org.openqa.jetty.jetty.Server@66388993
+16:02:05.824 INFO - Checking Resource aliases
+16:02:05.827 INFO - Command request: getNewBrowserSession[*firefox, http://localhost:4567, , ] on session null
+16:02:05.829 INFO - creating new remote session
+16:02:05.881 INFO - Allocated session c1386faa624242eaa37c7c0834ad7192 for http://localhost:4567, launching...
+16:02:05.907 INFO - Preparing Firefox profile...
+16:02:07.837 INFO - Launching Firefox...
+16:02:09.438 INFO - Got result: OK,c1386faa624242eaa37c7c0834ad7192 on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.440 INFO - Command request: setTimeout[300000, ] on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.458 INFO - Got result: OK on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.460 INFO - Command request: open[/repositories/edit, ] on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.490 INFO - Got result: XHR ERROR: URL = http://localhost:4567/repositories/edit Response_Code = 404 Error_Message = Not Found  on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.493 INFO - Command request: testComplete[, ] on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.493 INFO - Killing Firefox...
+16:02:09.505 INFO - Got result: OK on session c1386faa624242eaa37c7c0834ad7192
+16:02:09.508 INFO - Shutting down...

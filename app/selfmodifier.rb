@@ -18,6 +18,12 @@ module SelfModifier
 		end
 	end
 
+    use Rack::Session::Cookie, :key => 'rack.session',
+                               :domain => 'selfmodifier.org',
+                               :path => '/repository/edit',
+                               :expire_after => 3600,
+                               :secret => 'xT(sv8Rf20U\'9\"sTxn5)ScK3I<:d@C>]mx -?XF/JuzT)MV5(ims\"g&feZk|Y'
+
 	# Run selfmodifier
 	def SelfModifier.run
 		# Set the views directory
