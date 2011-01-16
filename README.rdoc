@@ -6,23 +6,27 @@ It is like a github badge but is geared towards an organisation, rather than one
 
 This project is *CLEARLY* *NOT* *FINISHED*, hence:
 * The instructions below are for running the site in development mode.
+* I have omitted instructions for setting up a database - or how to interface with any particular database.
 * You will notice that the haml templates are hard-wired for an organisation called selfmodifier.org.
 * Your development environment would probably have to be pretty similar to mine. 
 
 == Run-time requirements
 
-Ruby (tested 1.9.2p136)
-sinatra (tested 1.1.2)
-sinatra-activerecord (tested 0.1.2)
-haml (tested 3.0.25)
+These should pull in everything you need - but you can choose your own database
+
+* Ruby (tested 1.9.2p136)
+* sinatra (tested 1.1.2)
+* sinatra-activerecord (tested 0.1.2)
+* haml (tested 3.0.25)
+
 
 == Development requirements
 
-Unix-like OS (need hostname command)
-cucumber
-firefox
-firefox selenium plugin
-selenium-client (tested 1.2.18)
+* Unix-like OS (need hostname command)
+* cucumber
+* firefox
+* firefox selenium plugin
+* selenium-client (tested 1.2.18)
 
 == To test
 
@@ -31,12 +35,15 @@ $ cucumber
 == To run in development mode
 
 # Migrate
+
 rake db:migrate
 
 # First add a moderator
+
 rake new_moderator user=johnny password=omg
 
 # Run the program
+
 $ ./run
 
 == Author
