@@ -48,3 +48,16 @@ When /^the user browses to "([^"]*)"$/ do |addr|
 		$title = sel.title
 	end
 end
+
+When /^the user browses to "([^"]*)", catching http error$/ do |url|
+	with_selenium do |sel|
+		begin
+			sel.open url
+		rescue Selenium::CommandError => e
+			puts e.message
+			puts e.backtrace
+		ensure
+			$title = sel.title
+		end
+	end
+end

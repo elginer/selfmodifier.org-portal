@@ -23,10 +23,10 @@ end
 
 get "/user/moderation" do
 	if user = session[:user_id]
-		mod = Moderator.get user
+		me = Moderator.find_by_id(user).username
 		everyone = Moderator.all.map {|mod| mod.username}
 		repos = Repository.all.map {|repo| {:user => repo.user, :project => repo.project}}
-		haml :moderation, :locals => {:me => user, :everyone => everyone, :repositories => repos}
+		haml :moderation, :locals => {:me => me, :everyone => everyone, :projects => repos}
 	else
 		unauthorized
 	end

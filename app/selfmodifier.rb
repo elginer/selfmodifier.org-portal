@@ -36,6 +36,8 @@ module SelfModifier
 			SelfModifier.require_all subdir
 		end
 
+		enable :sessions
+
 		Cron.fork
 	end
 

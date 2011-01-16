@@ -8,5 +8,10 @@
   %body
     %h1
       Moderation
-    = haml :moderators, :locals => {:everyone => locals[:everyone]}
-    = haml :delete_repositories, :locals => {:repositories => locals[:repositories]}
+  .mods
+    %h2
+      Moderators
+  - locals[:everyone].each do |mod|
+    %p
+      = mod
+    = haml :delete_repositories, :locals => {:projects => locals[:projects]}

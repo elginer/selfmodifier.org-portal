@@ -23,7 +23,7 @@
       %td
         = rep.updated
       %td
-        %form{:action => "/user/moderation", method="DELETE"}
+        %form{:action => "/user/moderation", :method=>"DELETE"}
           %input{:type => "hidden", :name => "user", :value => rep.user}
           %input{:type => "hidden", :name => "project", :value => rep.project}
           %input{:type => "submit", :name => "delete", :value => "Delete"}
