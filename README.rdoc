@@ -4,7 +4,7 @@ This is a portal to github, which can record projects owned by several individua
 
 It is like a github badge but is geared towards an organisation, rather than one person.
 
-This project is *CLEARLY NOT FINISHED*, hence:
+This project is *CLEARLY* *NOT* *FINISHED*, hence:
 * The instructions below are for running the site in development mode.
 * You will notice that the haml templates are hard-wired for an organisation called selfmodifier.org.
 * Your development environment would probably have to be pretty similar to mine. 
