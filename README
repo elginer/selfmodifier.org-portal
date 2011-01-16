@@ -34,7 +34,7 @@ $ cucumber
 rake db:migrate
 
 # First add a moderator
-rake new_moderator user=johnny password=omgyousawmypassword
+rake new_moderator user=johnny password=omg
 
 # Run the program
 $ ./run
