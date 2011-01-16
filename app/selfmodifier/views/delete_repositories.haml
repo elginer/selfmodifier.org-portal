@@ -8,6 +8,8 @@
       Description
     %td
       Last updated (UTC)
+    %td
+      Delete
   - locals[:projects].each do |rep|
     - url = rep.url
     %tr
@@ -20,3 +22,9 @@
         = rep.safe_description
       %td
         = rep.updated
+      %td
+        %form{:action => "/user/moderation", method="DELETE"}
+          %input{:type => "hidden", :name => "user", :value => rep.user}
+          %input{:type => "hidden", :name => "project", :value => rep.project}
+          %input{:type => "submit", :name => "delete", :value => "Delete"}
+

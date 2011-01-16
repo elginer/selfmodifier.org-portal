@@ -29,9 +29,6 @@ module SelfModifier
 		# Load the cron system
 		require "selfmodifier/cron"
 
-		# Load the config file
-		require "selfmodifier/config"
-
 		# Load all controllers and models
 		["selfmodifier/controllers",
 		"selfmodifier/models",
