@@ -30,7 +30,7 @@ These should pull in everything you need - but you can choose your own database
 
 == To test
 
-$ cucumber
+cucumber
 
 == To run in development mode
 
@@ -44,7 +44,7 @@ rake new_moderator user=johnny password=omg
 
 # Run the program
 
-$ ./run
+./run
 
 == Author
 
