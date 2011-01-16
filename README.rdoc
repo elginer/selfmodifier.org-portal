@@ -6,9 +6,8 @@ It is like a github badge but is geared towards an organisation, rather than one
 
 This project is *CLEARLY* *NOT* *FINISHED*, hence:
 * The instructions below are for running the site in development mode.
-* I have omitted instructions for setting up a database - or how to interface with any particular database.
+* Specifically I have omitted instructions for setting up a database for production. 
 * You will notice that the haml templates are hard-wired for an organisation called selfmodifier.org.
-* Your development environment would probably have to be pretty similar to mine. 
 
 == Run-time requirements
 
@@ -18,7 +17,7 @@ These should pull in everything you need - but you can choose your own database
 * sinatra (tested 1.1.2)
 * sinatra-activerecord (tested 0.1.2)
 * haml (tested 3.0.25)
-
+* sqlite3 and gem (tested 0.1.1 of the gem)
 
 == Development requirements
 
