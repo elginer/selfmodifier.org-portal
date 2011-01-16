@@ -6,6 +6,23 @@ def unauthorized
 	haml :login_failed
 end
 
+# Only run a block if authorized
+# pass the username of the authorized user to the block
+def with_auth 
+	if mod_id = session[:user]
+		yield Moderator.find_by_id(mod_id).username
+	else
+		unauthorized
+	end
+end
+
+# Display the moderation page
+def moderation me
+	everyone = Moderator.all.map {|mod| mod.username}
+	repos = Repository.all
+	haml :moderation, :locals => {:me => me, :everyone => everyone, :projects => repos}
+end
+
 get "/user/login" do
 	haml :login
 end
@@ -14,7 +31,7 @@ post "/user/login" do
 	username = params[:username]
 	password = params[:password]
 	if mod = Moderator.authenticate(username, password)
-		session[:user_id] = mod.id
+		session[:user] = mod.id
 		redirect "/user/moderation"
 	else
 		unauthorized
@@ -22,12 +39,17 @@ post "/user/login" do
 end
 
 get "/user/moderation" do
-	if user = session[:user_id]
-		me = Moderator.find_by_id(user).username
-		everyone = Moderator.all.map {|mod| mod.username}
-		repos = Repository.all.map {|repo| {:user => repo.user, :project => repo.project}}
-		haml :moderation, :locals => {:me => me, :everyone => everyone, :projects => repos}
-	else
-		unauthorized
+	with_auth do |me|
+		moderation me
+	end 
+end
+
+post "/user/moderation" do
+	with_auth do |me|
+		repo = Repository.find_by_user_and_project params[:user], params[:project]
+		if repo
+			repo.delete
+		end
+		moderation me
 	end
 end

@@ -11,7 +11,7 @@ class MockGitHubInterface
 	# Note that we've asked about this repository 
 	def update! 
 		$unqueried.delete @num
-		$total_requests += 3
+		$total_requests += 1
 	end
 
 end

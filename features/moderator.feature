@@ -38,5 +38,21 @@ Feature: moderators
 
 	Scenario: log in required to see restricted area
 		When selfmodifier runs
-		When the user browses to "/user/moderation", catching http error
-		Then the title of the page is "selfmodifier.org - Access denied"
+		When the user cookie is deleted
+		Then the user browses to "/user/moderation", and receives an error
+
+	Scenario: delete repository
+		Given the moderator name is "bob" and their password is "cool"
+		When a new moderator is registered
+		When selfmodifier runs
+		Then a github repository, elginer/exclamation is added
+		When selfmodifier is stopped
+		When the database is loaded
+		Then a repository for elginer/exclamation is in the database
+		When the database is unloaded
+		When selfmodifier runs
+		When the moderator deletes a repository
+		When selfmodifier is stopped
+		When the database is unloaded
+		When the database is loaded
+		Then a repository for elginer/exclamation is not in the database

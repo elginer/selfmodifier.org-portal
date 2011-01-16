@@ -27,7 +27,7 @@ end
 def unsafe_save_repository username, repository
 	repo = Repository.new :user => username, :project => repository
 	if repo.save
-		repository_form :repository_added
+		redirect "/"	
 	else
 		status 409
 		repository_form :repository_not_saved

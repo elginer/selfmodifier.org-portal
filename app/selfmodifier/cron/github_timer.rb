@@ -27,7 +27,7 @@ module SelfModifier
 					reset
 				end
 			else
-				working = Set.new @current.take 20
+				working = Set.new @current.take 60
 				log "Working through #{working.size} repositories."
 				@current -= working
 				working.each do |rep|
