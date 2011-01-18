@@ -5,7 +5,7 @@ require "httpclient"
 
 require "json"
 
-require "date"
+require "time"
 
 module SelfModifier
 
@@ -32,7 +32,7 @@ module SelfModifier
 				repo.updated = @push_time
 				repo.description = @description
 				if repo.save				
-					puts "Repository #@user/#@project has been updated."
+					log "Repository #@user/#@project has been updated."
 				else
 					log_error "Repository #@user/#@project could not be saved."
 				end
@@ -50,11 +50,11 @@ module SelfModifier
 		def web_request 
 			with_logging do
 				url = "http://github.com/api/v2/json/repos/show/#{@user}/#{@project}"
-				puts "GET #{url}"
+				log "GET #{url}"
 				client = HTTPClient.new
 				raw = client.get(url).body.dump
 				repo_hash = JSON.parse(raw)["repository"]
-				@push_time = DateTime.parse(repo_hash["pushed_at"]).to_time
+				@push_time = Time.parse(repo_hash["pushed_at"])
 				@description = repo_hash["description"]
 			end
 		end
