@@ -5,6 +5,9 @@ Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 		sel.open "/repository/add"
 		sel.type "username", username
 		sel.type "repository", repository
+		puts "\a"
+		puts "Please fill out the captcha:"
+		sel.type "captcha_answer", STDIN.gets 
 		sel.click "add"
 		sel.wait_for_page 10
 	end
