@@ -1,13 +1,20 @@
 .new_repository
-  %p
-    Add a new repository to this portal by using the following form.
-  %form{:action => "add", :method => "post"}
-    %p
-      Github user
-      %input{:type => "text", :name => "username", :value => locals[:username]}
-    %p
-      Repository name      
-      %input{:type => "text", :name => "repository", :value => locals[:repository]}
+  #instruction_box
+    %h2
+      Add a new GitHub repository to our portal
+  %form#add_repository{:action => "add", :method => "post"}
+    %table
+      %tr#url_box
+      %tr
+        %td    
+          Github user
+        %td
+          %input#user{:type => "text", :name => "username", :value => locals[:username]}
+      %tr
+        %td
+          Repository
+        %td
+          %input#project{:type => "text", :name => "repository", :value => locals[:repository]}
     %p
       Please type the characters displayed in this image into the box below.
     %p

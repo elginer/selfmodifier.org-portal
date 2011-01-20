@@ -25,17 +25,23 @@ module SelfModifier
 		def update! 
 
 			# Request an update from github
-			web_request
+			if web_request
 
-			# Check the repositoy has not been deleted... this is in a cron job after all!
-			if repo = Repository.find_by_user_and_project(@user, @project)
-				repo.updated = @push_time
-				repo.description = @description
-				if repo.save				
-					log "Repository #@user/#@project has been updated."
+				# Check the repositoy has not been deleted... this is in a cron job after all!
+				if repo = Repository.find_by_user_and_project(@user, @project)
+					repo.updated = @push_time
+					repo.description = @description
+					if repo.save				
+						log "Repository #@user/#@project has been updated."
+					else
+						log_error "Repository #@user/#@project could not be saved."
+					end
 				else
-					log_error "Repository #@user/#@project could not be saved."
+					log_error "Repository #@user/#@project could not be updated because it no longer exists."
 				end
+			else
+				log_error "Repository #@user/#@project could not be updated because github could not be contacted."
+
 			end
 		end
 
@@ -56,6 +62,7 @@ module SelfModifier
 				repo_hash = JSON.parse(raw)["repository"]
 				@push_time = Time.parse(repo_hash["pushed_at"])
 				@description = repo_hash["description"]
+				true
 			end
 		end
 

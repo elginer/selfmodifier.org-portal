@@ -41,6 +41,12 @@ def bad_captcha
 
 end
 
+# GitHub thinks this repository does not exist.
+def github_refuse
+	status 404
+	repository_error "Cannot find repository", "Either the repository doesn't exist or GitHub is experiencing problems."
+end
+
 # Try to save the repository
 def unsafe_save_repository username, repository
 	repo = Repository.new :user => username, :project => repository
@@ -66,7 +72,7 @@ post "/repository/add" do
 			if exists
 				unsafe_save_repository username, repository
 			else
-				invalid_repository
+				github_refuse	
 			end
 		else
 			invalid_repository
