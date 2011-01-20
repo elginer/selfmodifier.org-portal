@@ -58,7 +58,7 @@ post "/repository/add" do
 		repository = params[:repository]
 		# Test these are legal github user and repository names
 		# Prevent arbitrary links :)
-		if /^\w(-|\w)*$/.match(username) and /^(-|\w)+$/.match(repository)
+		if /^\w(-|\w)*$/.match(username) and /^(-|\w|\.)+$/.match(repository)
 
 			# So the username and repository are okay.  Try to see if the project actually exists.
 			client = HTTPClient.new
