@@ -40,7 +40,7 @@ rake db:migrate
 
 # First add a moderator
 
-rake new_moderator user=johnny password=omg
+rake db:create_moderator USER=johnny PASSWORD=omg
 
 # Run the program
 
