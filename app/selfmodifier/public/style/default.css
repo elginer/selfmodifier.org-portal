@@ -1,0 +1,80 @@
+/*
+ * selfmodifier.org stylesheet
+ * Author: John Morrice
+ * Date 2010:
+ * This stylesheet is hereby released into the public domain.
+ *
+ * It's not that I don't understand CSS, it's that I don't
+ * have a good eye for asthetics or prettiness in general.
+ *
+ * I'm good at algorithms, not design!
+ *
+ * I would rather someone who was better at this would give this
+ * a rewriting.
+ *
+ */
+body 
+{
+	font-family: sans-serif;
+}
+div.content
+{
+	padding-top: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 768px;
+}
+
+div.links
+{
+	background-color: black;
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 1em;
+}
+
+a.navigation
+{
+	color: white;
+	padding: 1em;
+	font-size: 1.2em;
+}
+
+a.navigation:active, a.navigation:visited
+{
+	color: white;
+
+}
+
+a.navigation:hover
+{
+	color: black;
+	background-color: gray;
+}
+
+tr.data0
+{
+	color:black;
+	background-color: lightgray;
+}
+
+tr.data1
+{
+	color:black;
+	background-color: white; 
+}
+
+td, th
+{
+	padding: 1em;
+}
+
+table, td, th
+{
+	border: 2px solid black;
+}
+
+table
+{
+	border-collapse: collapse;
+}

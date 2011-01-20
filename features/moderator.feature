@@ -29,8 +29,6 @@ Feature: moderators
 		Then the title of the page is "selfmodifier.org - Welcome bob"
 
 	Scenario: prevent unauthorized web-based log-in
-		Given the moderator name is "bob" and their password is "cool"
-		When a new moderator is registered
 		When selfmodifier runs
 		Given the moderator name is "sam" and their password is "awesome"
 		When the moderator logs in over the web
@@ -56,3 +54,9 @@ Feature: moderators
 		When the database is unloaded
 		When the database is loaded
 		Then a repository for elginer/exclamation is not in the database
+
+	Scenario: logout
+		Given the moderator name is "bob" and their password is "cool"
+		When a new moderator is registered
+		When selfmodifier runs
+		When the moderator logs in over the web, and then logs out, and then browses to "/user/moderation", and receives an error

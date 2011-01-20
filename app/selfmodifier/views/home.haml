@@ -2,25 +2,22 @@
 !!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
+    = haml :style
     %title
       selfmodifier.org - In pursuit of low-cost sensory augmentation
     %body
-      %h1
-        selfmodifier.org - In pursuit of low-cost sensory augmentation 
-      %p
-        selfmodifier.org is a portal to computer and electronics projects which create, or support the development, of technology to provide new sensory experiences.
-      %p
-        Our other half, <a href="http://biohack.me">biohack.me</a> is a forum for the discussion of anything of relevance to the biohacking/grinder/wetware hacker community.
-      %p
-        Unfortunately, this site is currently limited to interfacing with <a href="http://github.com">github</a>.  If you have a project elsewhere, and you would like us to mirror, host, or just point a link at it, then please email <a href="mailto:admin@selfmodifier.org">admin@selfmodifier.org</a> - and we will see what we can do.
+      = haml :navigation
+      .content
+        %h1
+          Low-cost sensory augmentation project repository
+        %p
+          selfmodifier.org is a portal to computer and electronics projects which create, or support the development, of technology to provide new sensory experiences.
+        %p
+          Our other half, <a href="http://biohack.me">biohack.me</a> is a forum for the discussion of anything of relevance to the biohacking/grinder/wetware hacker community.
+        %p
+          Unfortunately, this site is currently limited to interfacing with <a href="http://github.com">github</a>.  If you have a project elsewhere, and you would like us to mirror, host, or just point a link at it, then please email <a href="mailto:admin@selfmodifier.org">admin@selfmodifier.org</a> - and we will see what we can do.
 
-      .links
-        %a{:href => "repository/add"}
-          Add another repository
-
-        %a{:href => "/user/login"}
-          Login
-      .repositories
-        %h2
-          Sensory augmentation projects: 
-        = locals[:repositories]
+        .repositories
+          %h2
+            Sensory augmentation projects: 
+          = locals[:repositories]

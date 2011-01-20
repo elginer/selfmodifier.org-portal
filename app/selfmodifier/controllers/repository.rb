@@ -7,22 +7,38 @@ require "httpclient"
 
 include SelfModifier
 
-# Load up another template and use it as a form
-def repository_form page
-	# TODO replace with partials in the template 
-	add = haml :repository_form
-	haml page, :locals => {:form => add}
-end
-
 # Form to add new repository
 get "/repository/add" do
-	repository_form :repository_add
+	haml :repository, :locals => {:title => "Add repository"}
+end
+
+# There was an error adding the repository
+def repository_error abstract, reason
+	haml :repository, :locals => {
+		:title => abstract,
+		:message => reason,
+		:username => params[:username],
+		:repository => params[:repository]
+	}
 end
 
 # The repository is invalid
 def invalid_repository
 	status 403
-	repository_form :repository_invalid
+	repository_error "Invalid repository", "The repository was not added, because the user and/or repository names were invalid."
+end
+
+# The repository was already in the portal
+def repository_already_present
+	status 409
+	repository_error "Repository already exists.", "The repository was already in the database."
+end
+
+# The captcha was bad
+def bad_captcha
+	status 401
+	repository_error "Bad captcha", "You did not fill out the captcha correctly."
+
 end
 
 # Try to save the repository
@@ -31,8 +47,7 @@ def unsafe_save_repository username, repository
 	if repo.save
 		redirect "/"	
 	else
-		status 409
-		repository_form :repository_not_saved
+		repository_already_present	
 	end
 end
 
@@ -57,7 +72,6 @@ post "/repository/add" do
 			invalid_repository
 		end
 	else
-		status 401
-		haml :repository_bad_captcha
+		bad_captcha	
 	end
 end

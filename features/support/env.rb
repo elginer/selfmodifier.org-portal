@@ -32,7 +32,7 @@ end
 
 # Run selfmodifer
 def fork_selfmodifier
-	$SERVER_PID = fork_process "run"
+	$SERVER_PID = fork_process "test"
 	wait_connect "4567"
 	$SELENIUM_PID = fork_process "run_selenium"
 	wait_connect "4444"

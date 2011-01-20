@@ -1,7 +1,7 @@
 %h2
   Repositories
 %table.repository
-  %tr
+  %tr.header
     %td
       Project Name 
     %td
@@ -12,9 +12,9 @@
       Last updated (UTC)
     %td
       Delete
-  - locals[:projects].each do |rep|
+  - locals[:projects].each_with_index do |rep, index|
     - url = rep.url
-    %tr
+    %tr{:class => "data#{index % 2}"}
       %td
         = rep.project
       %td

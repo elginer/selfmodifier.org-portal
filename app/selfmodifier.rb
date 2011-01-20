@@ -3,8 +3,11 @@ require "sinatra"
 # Our SelfModifier module
 module SelfModifier
 
-	# The top level directory
+	# The top level directory, for file inclusion
 	DIR = File.dirname __FILE__
+
+	# Set the sinatra root
+	set :root, DIR + "/selfmodifier/" 
 
 	# Set the PATH
 	$:.unshift DIR
@@ -20,9 +23,6 @@ module SelfModifier
 
 	# Run selfmodifier
 	def SelfModifier.run
-		# Set the views directory
-		set :views, DIR + "/selfmodifier/views"
-
 		# Load the database settings
 		require "selfmodifier/database"
 

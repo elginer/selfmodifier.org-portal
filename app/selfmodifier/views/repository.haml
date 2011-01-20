@@ -1,5 +1,5 @@
 !!! XML
-!!! Strict 
+!!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
     = haml :style
@@ -9,7 +9,7 @@
   %body
     = haml :navigation
     .content
-      %p
+      %p 
         = locals[:message]
-      %div
-        = haml :login_form
+      %p
+        = haml :repository_form, :locals => {:username => locals[:username], :repository => locals[:repository]}

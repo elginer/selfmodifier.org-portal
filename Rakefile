@@ -7,8 +7,12 @@ require "selfmodifier/models/moderator"
 
 desc "Create a new moderator, using parameters user and password"
 # Register a new moderator
-task :new_moderator do
-	user = ENV["user"]
-	password = ENV["password"]
-	SelfModifier::Moderator.register user, password
+task "db:create_moderator" do
+	user = ENV["USER"]
+	password = ENV["PASSWORD"]
+	if user and password
+		SelfModifier::Moderator.register user, password
+	else
+		fail "Usage: rake db:create_moderator USER=name PASSWORD=secret"
+	end
 end

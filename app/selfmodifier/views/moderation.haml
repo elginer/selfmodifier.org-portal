@@ -2,16 +2,19 @@
 !!! Strict
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
+    = haml :style
     %title
       selfmodifier.org - Welcome
       = locals[:me]
   %body
-    %h1
-      Moderation
-  .mods
-    %h2
-      Moderators
-  - locals[:everyone].each do |mod|
-    %p
-      = mod
-    = haml :delete_repositories, :locals => {:projects => locals[:projects]}
+    = haml :moderator_navigation
+    .content
+      %h1
+        Moderation
+      .mods
+        %h2
+          Moderators
+      - locals[:everyone].each do |mod|
+        %p
+          = mod
+      = haml :delete_repositories, :locals => {:projects => locals[:projects]}

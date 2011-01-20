@@ -1,16 +1,16 @@
 %table.repository
   %tr
-    %td
+    %th
       Project Name 
-    %td
+    %th
       URL
-    %td
+    %th
       Description
-    %td
+    %th
       Last updated (UTC)
-  - locals[:projects].each do |rep|
+  - locals[:projects].each_with_index do |rep, index|
     - url = rep.url
-    %tr
+    %tr{:class => "data#{index % 2}"}
       %td
         = rep.project
       %td

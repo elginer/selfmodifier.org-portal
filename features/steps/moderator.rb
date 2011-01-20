@@ -6,7 +6,7 @@ Given /^the moderator name is "([^"]*)" and their password is "([^"]*)"$/ do |us
 end
 
 When /^a new moderator is registered$/ do
-	unless system("rake new_moderator user=#$user password=#$password")
+	unless system("rake db:create_moderator USER=#$user PASSWORD=#$password")
 		raise "Could not create new moderator!"
 	end
 end
@@ -79,5 +79,28 @@ end
 When /^the user cookie is deleted$/ do
 	with_selenium do |sel|
 		sel.delete_cookie "user", "domain=#{hostname}, path=/"
+	end
+end
+When /^the moderator logs in over the web, and then logs out, and then browses to "([^"]*)", and receives an error$/ do |url|
+	with_selenium do |sel|
+		sel.open "user/login"
+		sel.open "/user/login"
+		sel.type "username", $user
+		sel.type "password", $password
+		sel.click "login"
+		sel.wait_for_page 10
+		sel.click "logout"
+		sel.wait_for_page 10
+		authenticated = false
+		with_selenium do |sel|
+			begin
+				sel.open url
+			rescue Selenium::CommandError => e
+				authenticated = false
+			end
+		end
+		if authenticated
+			raise "Unauthorized user logged in!"
+		end
 	end
 end

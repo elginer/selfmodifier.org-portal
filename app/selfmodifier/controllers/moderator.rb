@@ -3,7 +3,7 @@ require "sinatra"
 # Unauthorized access
 def unauthorized
 	status 403
-	haml :login_failed
+	haml :login, :locals => {:tile => "Access denied", :message => "Login failed."}
 end
 
 # Only run a block if authorized
@@ -24,7 +24,7 @@ def moderation me
 end
 
 get "/user/login" do
-	haml :login
+	haml :login, :locals => {:title => "Login", :message => "Enter user name and password."}
 end
 
 post "/user/login" do
@@ -36,6 +36,11 @@ post "/user/login" do
 	else
 		unauthorized
 	end
+end
+
+post "/user/logout" do
+	session[:user] = nil
+	redirect "/"
 end
 
 get "/user/moderation" do
