@@ -3,3 +3,4 @@ app/selfmodifier/config.rb
 selenium.err
 selenium.out
 selfmodifier.sqlite3.db
+config/deploy.rb
