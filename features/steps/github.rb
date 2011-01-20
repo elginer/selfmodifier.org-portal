@@ -1,12 +1,14 @@
 require "selfmodifier/models/repository"
 
+require "rainbow"
+
 Then /^a github repository, (.+)\/(.+) is added$/ do |username, repository|
 	with_selenium do |sel|
 		sel.open "/repository/add"
 		sel.type "username", username
 		sel.type "repository", repository
 		puts "\a"
-		puts "Please fill out the captcha:"
+		puts "Please fill out the captcha:".foreground 255, 100, 100
 		sel.type "captcha_answer", STDIN.gets 
 		sel.click "add"
 		sel.wait_for_page 10

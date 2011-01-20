@@ -3,7 +3,7 @@ require "sinatra"
 # Unauthorized access
 def unauthorized
 	status 403
-	haml :login, :locals => {:tile => "Access denied", :message => "Login failed."}
+	haml :login, :locals => {:title => "Access denied", :message => "Login failed."}
 end
 
 # Only run a block if authorized

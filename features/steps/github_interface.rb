@@ -1,6 +1,6 @@
 require "selfmodifier/lib/github_interface"
 
-require "date"
+require "time"
 
 Given /^the github repository is (.+)\/(.+)$/ do |user, project|
 	$repo = GitHubInterface.new user, project
@@ -17,14 +17,14 @@ Then /^the query should return false$/ do
 end
 
 Then /^the last update time should be "([^"]*)"$/ do |time_str|
-	should = DateTime.parse(time_str).to_time
+	should = Time.parse(time_str)
 	unless $repo.send(:push_time) == should
-		raise "repository was updated at #{$repo.push_time}"
+		raise "repository was updated at #{$repo.send :push_time}"
 	end
 end
 
 Then /^the description should be "([^"]*)"$/ do |about|
 	unless $repo.send(:description) == about
-		raise "repository description was #{repo.description}"
+		raise "repository description was #{$repo.send :description}"
 	end
 end
