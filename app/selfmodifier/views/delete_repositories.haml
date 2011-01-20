@@ -1,30 +1,30 @@
 %h2
   Repositories
-%table.repository
-  %tr.header
-    %td
+%table.repo
+  %tr
+    %th.repo
       Project Name 
-    %td
+    %th.repo
       URL
-    %td
+    %th.repo
       Description
-    %td
+    %th.repo
       Last updated (UTC)
-    %td
+    %th.repo
       Delete
   - locals[:projects].each_with_index do |rep, index|
     - url = rep.url
     %tr{:class => "data#{index % 2}"}
-      %td
+      %td.repo
         = rep.project
-      %td
+      %td.repo
         %a{:href => url}
           = url
-      %td
+      %td.repo
         = rep.safe_description
-      %td
+      %td.repo
         = rep.updated
-      %td
+      %td.repo
         %form{:action => "/user/moderation", :method=>"POST"}
           %input{:type => "hidden", :name => "user", :value => rep.user}
           %input{:type => "hidden", :name => "project", :value => rep.project}

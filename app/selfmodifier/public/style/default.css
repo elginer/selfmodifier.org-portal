@@ -77,7 +77,7 @@ td, th
 	padding: 1em;
 }
 
-table.repository, td.repository, th.repository
+table.repo, td.repo, th.repo
 {
 	border: 2px solid black;
 }

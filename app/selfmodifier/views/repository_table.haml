@@ -1,22 +1,22 @@
-%table
+%table.repo
   %tr
-    %th
+    %th.repo
       Project Name 
-    %th
+    %th.repo
       URL
-    %th
+    %th.repo
       Description
-    %th
+    %th.repo
       Last updated (UTC)
   - locals[:projects].each_with_index do |rep, index|
     - url = rep.url
     %tr{:class => "data#{index % 2}"}
-      %td
+      %td.repo
         = rep.project
-      %td
+      %td.repo
         %a{:href => url}
           = url
-      %td
+      %td.repo
         = rep.safe_description
-      %td
+      %td.repo
         = rep.updated
