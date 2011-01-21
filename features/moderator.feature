@@ -34,11 +34,6 @@ Feature: moderators
 		When the moderator logs in over the web
 		Then the title of the page is "selfmodifier.org - Access Denied"
 
-	Scenario: log in required to see restricted area
-		When selfmodifier runs
-		When the user cookie is deleted
-		Then the user browses to "/user/moderation", and receives an error
-
 	Scenario: delete repository
 		Given the moderator name is "bob" and their password is "cool"
 		When a new moderator is registered

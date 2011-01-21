@@ -27,7 +27,7 @@ module SelfModifier
 		set :root, DIR + "/selfmodifier/" 
 
 		# Set up sessions
-		use Rack::Session::Cookie, :path => '/user/',
+		use Rack::Session::Cookie, :path => '/user',
 			:expire_after => 3600,
 			:secret => SelfModifier::SECRET
 

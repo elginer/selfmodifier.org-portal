@@ -3,6 +3,7 @@ module SelfModifier
 	class App
 		# Unauthorized access
 		def unauthorized
+			log "Unauthorized action refused!"
 			status 401
 			haml :login
 		end
@@ -11,7 +12,13 @@ module SelfModifier
 		# pass the username of the authorized user to the block
 		def with_auth 
 			if mod_id = session[:user]
-				yield Moderator.find_by_id(mod_id).username
+				mod = Moderator.find_by_id(mod_id).username
+				if mod
+					log "Action by #{mod} authorized."
+					yield mod
+				else
+					raise "Mod does not exist: #{mod_id}"
+				end
 			else
 				unauthorized
 			end
@@ -48,9 +55,14 @@ module SelfModifier
 
 		post "/user/moderation" do
 			with_auth do |me|
-				repo = Repository.find_by_user_and_project params[:user], params[:project]
+				user = params[:user]
+				project = params[:project]
+				repo = Repository.find_by_user_and_project user, project
 				if repo
 					repo.delete
+					log "User #{me} deleted #{user}/#{project}."
+				else
+					log_error "User #{me} could not delete repository #{user}/#{project}."
 				end
 				moderation me
 			end

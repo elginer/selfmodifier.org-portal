@@ -2,14 +2,21 @@ require "selfmodifier/models/moderator"
 
 # Login
 def login sel
+	puts "Initial cookies:"
+	puts sel.cookies
 	begin
 		sel.open "/user/moderation"
 	rescue Selenium::CommandError
-		sel.type "username", $user
-		sel.type "password", $password
-		sel.click "login"
-		sel.wait_for_page 10		
+
 	end
+	puts "Open cookies:"
+	puts sel.cookies
+	sel.type "username", $user
+	sel.type "password", $password
+	sel.click "login"
+	sel.wait_for_page 10
+	puts "Login cookies:"
+	puts sel.cookies
 end
 
 Given /^the moderator name is "([^"]*)" and their password is "([^"]*)"$/ do |username, password|
@@ -76,15 +83,15 @@ When /^the moderator deletes a repository$/ do
 	with_selenium do |sel|
 		login sel
 		sel.click "delete"
+		puts "delete cookies:"
+		puts sel.cookies
 		sel.wait_for_page 10
+		if sel.title == "selfmodifier.org - Access Denied"
+			raise "Couldn't delete repository."
+		end
 	end
 end
 
-When /^the user cookie is deleted$/ do
-	with_selenium do |sel|
-		sel.delete_cookie "user", "domain=#{hostname}, path=/"
-	end
-end
 When /^the moderator logs in over the web, and then logs out, and then browses to "([^"]*)", and receives an error$/ do |url|
 	with_selenium do |sel|
 		login sel
