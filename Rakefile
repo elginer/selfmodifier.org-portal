@@ -25,7 +25,7 @@ end
 desc "Create a new secret for the sessions"
 task "secret" do
 	puts "started."
-	syms = ("!".."~").to_a
+	syms = ("$".."~").to_a
 	secret = (0..50).map do
 		syms[rand(syms.size)]
 	end .join
