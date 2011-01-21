@@ -39,10 +39,10 @@ function url_altered()
 // The URL can be used to fill in the user and repository form. 
 function create_url_form()
 {
-	var url = "<td>URL (e.g. http://github.com/user/repository)</td> <td><input class='wide' type='text' id='url'></td>";
+	var url = "<tr><td>URL (e.g. http://github.com/user/repository)</td> <td><input class='wide' type='text' id='url'></td></tr>";
 
 	$("#instruction_box").append("When you enter a URL, the user and repository will be automatically discovered.  However, if there is a problem, you may enter them manually.");
-	$("#url_box").append(url);
+	$("#first_static_row").before(url);
 
 
 	setInterval(url_altered, 100);

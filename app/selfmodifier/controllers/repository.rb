@@ -4,6 +4,18 @@ require "selfmodifier/models/repository"
 
 require "httpclient"
 
+# TODO send a bug report to sinatra/captcha maintainer asking for alt
+module Sinatra
+
+	module Captcha
+		# A valid XHTML version of captcha_image_tag
+		def valid_captcha_image_tag
+			"<input name=\"captcha_session\" type=\"hidden\" value=\"#{captcha_session}\"/>\n" +
+				"<img id=\"captcha-image\" alt=\"CAPTCHA\" src=\"http://captchator.com/captcha/image/#{captcha_session}\"/>"
+		end
+	end
+end
+
 module SelfModifier
 
 	class App

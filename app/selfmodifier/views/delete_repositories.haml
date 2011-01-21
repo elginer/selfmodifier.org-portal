@@ -18,15 +18,15 @@
       %td.repo
         = rep.project
       %td.repo
-        %a{:href => url}
-          = url
+        %a{:href => url}= url
       %td.repo
         = rep.safe_description
       %td.repo
         = rep.updated
       %td.repo
-        %form{:action => "/user/moderation", :method=>"POST"}
-          %input{:type => "hidden", :name => "user", :value => rep.user}
-          %input{:type => "hidden", :name => "project", :value => rep.project}
-          %input{:type => "submit", :name => "delete", :value => "Delete"}
+        %form{:action => "/user/moderation", :method=>"post"}
+          %p
+            %input{:type => "hidden", :name => "user", :value => rep.user}
+            %input{:type => "hidden", :name => "project", :value => rep.project}
+            %input{:type => "submit", :name => "delete", :value => "Delete"}
 

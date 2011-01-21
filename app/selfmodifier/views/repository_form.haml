@@ -4,8 +4,7 @@
       Add a new GitHub repository to our portal
   %form#add_repository{:action => "add", :method => "post"}
     %table
-      %tr#url_box
-      %tr
+      %tr#first_static_row
         %td    
           Github user
         %td
@@ -18,7 +17,7 @@
     %p
       Please type the characters displayed in this image into the box below.
     %p
-      = captcha_image_tag
+      = valid_captcha_image_tag
     %p
       = captcha_answer_tag
     %p

@@ -4,7 +4,7 @@
   %head
     %script{:src => "/js/jquery-1.4.4.min.js", :type => "text/javascript"}
     %script{:src => "/js/repository.js", :type => "text/javascript"}
-    %script
+    %script{:type => "text/javascript"}
       $(document).ready(function (){create_url_form();});
     = haml :style
     %title
@@ -15,5 +15,4 @@
     .content.hard_centered
       %p 
         = locals[:message]
-      %p
-        = haml :repository_form, :locals => {:username => locals[:username], :repository => locals[:repository]}
+      = haml :repository_form, :locals => {:username => locals[:username], :repository => locals[:repository]}

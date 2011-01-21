@@ -5,20 +5,20 @@
     = haml :style
     %title
       selfmodifier.org - In pursuit of low-cost sensory augmentation
-    %body
-      = haml :navigation
-      .content
-        %h1
-          Low-cost sensory augmentation projects
-        %p
-          selfmodifier.org is a portal to computer and electronics projects which create, or support the development, of technology to provide new sensory experiences.
-        %p
-          Our other half, <a href="http://biohack.me">biohack.me</a> is a forum for the discussion of anything of relevance to the biohacking/grinder/wetware hacker community.
-        %p
-          For now, this is merely a cunningly arranged list of source controlled projects, asynchronously updated from <a href="github.com">github</a>. 
-        %p
-          <b>Coming soon:</b> <a href="http://gnusha.org/skdb/">skdb integration</a>.
+  %body
+    = haml :navigation
+    .content
+      %h1
+        Low-cost sensory augmentation projects
+      %p
+        selfmodifier.org is a portal to computer and electronics projects which create, or support the development, of technology to provide new sensory experiences.
+      %p
+        Our other half, <a href="http://biohack.me">biohack.me</a> is a forum for the discussion of anything of relevance to the biohacking/grinder/wetware hacker community.
+      %p
+        For now, this is merely a cunningly arranged list of source controlled projects, asynchronously updated from <a href="github.com">github</a>. 
+      %p
+        <b>Coming soon:</b> <a href="http://gnusha.org/skdb/">skdb integration</a>.
 
-        %h2
-          The projects: 
-        = locals[:repositories]
+      %h2
+        The projects: 
+      = locals[:repositories]
