@@ -3,3 +3,5 @@ selenium.err
 selenium.out
 selfmodifier.sqlite3.db
 config/
+production.log
+production.err
