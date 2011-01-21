@@ -3,6 +3,5 @@ selenium.err
 selenium.out
 selfmodifier.sqlite3.db
 app/selfmodifier/database.rb
-app/selfmodifier/secret.rb
 production.log
 production.err

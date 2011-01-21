@@ -23,7 +23,7 @@ task "db:create_moderator" do
 end
 
 desc "Create a new secret for the sessions"
-file "app/selfmodifier/secret.rb" do
+task "secret" do
 	puts "started."
 	syms = ("!".."~").to_a
 	secret = (0..50).map do
