@@ -18,6 +18,7 @@ These should pull in everything you need - but you can choose your own database
 * sinatra-activerecord (tested 0.1.2)
 * haml (tested 3.0.25)
 * sqlite3 and gem (tested 0.1.1 of the gem)
+* httpclient
 
 == Development requirements
 
