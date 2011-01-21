@@ -41,6 +41,9 @@ to connect to your database
 
 Then do:
 
+# Create a secret
+rake secret
+
 # Migrate
 
 rake db:migrate
