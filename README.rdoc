@@ -26,6 +26,7 @@ These should pull in everything you need - but you can choose your own database
 * firefox
 * firefox selenium plugin
 * selenium-client (tested 1.2.18)
+* vlad
 * rainbow (so you can see it asking you to fill in the captcha during testing)
 
 == To test

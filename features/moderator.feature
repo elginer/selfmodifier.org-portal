@@ -32,7 +32,7 @@ Feature: moderators
 		When selfmodifier runs
 		Given the moderator name is "sam" and their password is "awesome"
 		When the moderator logs in over the web
-		Then the title of the page is "selfmodifier.org - Access denied"
+		Then the title of the page is "selfmodifier.org - Access Denied"
 
 	Scenario: log in required to see restricted area
 		When selfmodifier runs

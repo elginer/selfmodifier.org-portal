@@ -1,5 +1,6 @@
 #!/usr/local/bin/ruby
-require "sinatra"
+require "sinatra/base"
 require "./app/selfmodifier"
 
-SelfModifier.run
+SelfModifier.load_all
+SelfModifier::App.run!

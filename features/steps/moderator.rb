@@ -1,5 +1,17 @@
 require "selfmodifier/models/moderator"
 
+# Login
+def login sel
+	begin
+		sel.open "/user/moderation"
+	rescue Selenium::CommandError
+		sel.type "username", $user
+		sel.type "password", $password
+		sel.click "login"
+		sel.wait_for_page 10		
+	end
+end
+
 Given /^the moderator name is "([^"]*)" and their password is "([^"]*)"$/ do |username, password|
 	$user = username
 	$password = password
@@ -27,11 +39,7 @@ end
 
 When /^the moderator logs in over the web$/ do
 	with_selenium do |sel|
-		sel.open "/user/login"
-		sel.type "username", $user
-		sel.type "password", $password
-		sel.click "login"
-		sel.wait_for_page 10
+		login sel
 		$title = sel.title
 	end
 end
@@ -66,11 +74,7 @@ end
 
 When /^the moderator deletes a repository$/ do
 	with_selenium do |sel|
-		sel.open "/user/login"
-		sel.type "username", $user
-		sel.type "password", $password
-		sel.click "login"
-		sel.wait_for_page 10		
+		login sel
 		sel.click "delete"
 		sel.wait_for_page 10
 	end
@@ -83,12 +87,7 @@ When /^the user cookie is deleted$/ do
 end
 When /^the moderator logs in over the web, and then logs out, and then browses to "([^"]*)", and receives an error$/ do |url|
 	with_selenium do |sel|
-		sel.open "user/login"
-		sel.open "/user/login"
-		sel.type "username", $user
-		sel.type "password", $password
-		sel.click "login"
-		sel.wait_for_page 10
+		login sel
 		sel.click "logout"
 		sel.wait_for_page 10
 		authenticated = false

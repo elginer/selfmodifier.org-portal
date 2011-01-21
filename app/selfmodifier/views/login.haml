@@ -4,12 +4,10 @@
   %head
     = haml :style
     %title
-      selfmodifier.org -
-      = locals[:title]
+      selfmodifier.org - Access Denied
+      
   %body
     = haml :navigation
     .content.hard_centered
-      %p
-        = locals[:message]
       %div
         = haml :login_form

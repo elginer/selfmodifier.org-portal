@@ -1,14 +1,10 @@
-require "sinatra"
+require "sinatra/base"
 
 # Our SelfModifier module
 module SelfModifier
 
 	# The top level directory, for file inclusion
 	DIR = File.dirname __FILE__
-
-	# Set the sinatra root
-	set :root, DIR + "/selfmodifier/" 
-
 	# Set the PATH
 	$:.unshift DIR
 
@@ -21,8 +17,18 @@ module SelfModifier
 		end
 	end
 
-	# Run selfmodifier
-	def SelfModifier.run
+	# The selfmodifier application
+	class App < Sinatra::Base
+
+		# Set the sinatra root
+		set :root, DIR + "/selfmodifier/" 
+		enable :sessions
+
+	end
+	
+
+	# Load all of selfmodifier
+	def SelfModifier.load_all
 		# Load the database settings
 		require "selfmodifier/database"
 
@@ -35,8 +41,6 @@ module SelfModifier
 		"selfmodifier/cron"].each do |subdir|
 			SelfModifier.require_all subdir
 		end
-
-		enable :sessions
 
 		Cron.fork
 	end
