@@ -39,10 +39,10 @@ module SelfModifier
 		# Create a secure URL to a resource
 		# In development, don't bother
 		def App.secure path
-			if development?
-				path
-			else
+			if production? 
 				"https://#{SelfModifier::HOST}#{path}"
+			else
+				path
 			end
 		end
 

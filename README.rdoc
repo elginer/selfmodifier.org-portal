@@ -35,6 +35,12 @@ cucumber
 
 == To run in development mode
 
+First create and edit
+app/selfmodifier/database.rb
+to connect to your database
+
+Then do:
+
 # Migrate
 
 rake db:migrate
