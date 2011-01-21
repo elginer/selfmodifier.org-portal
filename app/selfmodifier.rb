@@ -17,32 +17,50 @@ module SelfModifier
 		end
 	end
 
+	require "selfmodifier/secret"
+
 	# The selfmodifier application
+	# Run SelfModifier.load
 	class App < Sinatra::Base
 
 		# Set the sinatra root
 		set :root, DIR + "/selfmodifier/" 
-		enable :sessions
 
-	end
-	
+		# Set up sessions
+		use Rack::Session::Cookie, :path => '/user/',
+			:expire_after => 3600,
+			:secret => SelfModifier::SECRET
 
-	# Load all of selfmodifier
-	def SelfModifier.load_all
-		# Load the database settings
-		require "selfmodifier/database"
-
-		# Load the cron system
-		require "selfmodifier/cron"
-
-		# Load all controllers and models
-		["selfmodifier/controllers",
-		"selfmodifier/models",
-		"selfmodifier/cron"].each do |subdir|
-			SelfModifier.require_all subdir
+		def initialize
+			Cron.fork
+			super
 		end
 
-		Cron.fork
+		# Create a secure URL to a resource
+		# In development, don't bother
+		def App.secure path
+			if development?
+				path
+			else
+				"https://#{SelfModifier::HOST}#{path}"
+			end
+		end
+
 	end
+
+
+
+	# Load the database settings
+	require "selfmodifier/database"
+
+	# Load the cron system
+	require "selfmodifier/cron"
+
+	# Load all controllers and models
+	["selfmodifier/controllers",
+		"selfmodifier/models",
+		"selfmodifier/cron"].each do |subdir|
+		SelfModifier.require_all subdir
+		end
 
 end

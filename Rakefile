@@ -21,3 +21,20 @@ task "db:create_moderator" do
 		fail "Usage: rake db:create_moderator USER=name PASSWORD=secret"
 	end
 end
+
+desc "Create a new secret for the sessions"
+file "app/selfmodifier/secret.rb" do
+	puts "started."
+	syms = ("!".."~").to_a
+	secret = (0..50).map do
+		syms[rand(syms.size)]
+	end .join
+	gen = File.open "app/selfmodifier/secret.rb", "w"
+	gen.write <<-END
+module SelfModifier
+
+	SECRET = "#{secret}"
+end
+END
+	gen.close
+end

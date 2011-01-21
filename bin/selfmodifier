@@ -2,5 +2,4 @@
 require "sinatra/base"
 require "./app/selfmodifier"
 
-SelfModifier.load_all
 SelfModifier::App.run!
