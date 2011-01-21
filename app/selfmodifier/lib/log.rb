@@ -12,12 +12,10 @@ end
 
 # Log an error message
 def log_error string
-	STDERR.puts Time.now
-	STDERR.puts string
+	log string, STDERR
 end
 
 # Just log
-def log status 
-	puts Time.now
-	puts status
+def log status, pipe=STDOUT
+	pipe.puts Time.now.to_s + "\n" + status
 end
