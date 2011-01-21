@@ -32,6 +32,7 @@ module SelfModifier
 			:secret => SelfModifier::SECRET
 
 		def initialize
+
 			Cron.fork
 			super
 		end
